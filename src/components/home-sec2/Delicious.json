@@ -1,0 +1,38 @@
+[
+    {
+        "restaurant_name": "Potbelly Sandwich Shop",
+        "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/f1fbslj3fqxugvfpmfbh",
+        "delivery_charge": 1,
+        "location": "Jarabacoa",
+        "ratings": 5,
+        "category": "Deli",
+        "average_time": 26
+      },
+      {
+        "restaurant_name": "Sol Mexican Grill",
+        "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/as8i5bwea7di48d5j4lr",
+        "delivery_charge": 1,
+        "location": "Tovačov",
+        "ratings": 3,
+        "category": "Grill",
+        "average_time": 29
+      },
+      {
+        "restaurant_name": "Jinya Ramen Bar",
+        "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/ey0lgwssrbtbvheq4egc",
+        "delivery_charge": 2,
+        "location": "Siuna",
+        "ratings": 4,
+        "category": "Deli",
+        "average_time": 22
+      },
+      {
+        "restaurant_name": "Panera Bread",
+        "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/zfkjsagaslxtjuwh5ieq",
+        "delivery_charge": 1,
+        "location": "Chashan",
+        "ratings": 3,
+        "category": "American",
+        "average_time": 37
+      }
+]

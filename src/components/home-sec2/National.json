@@ -1,0 +1,38 @@
+[
+    {
+        "restaurant_name": "Chipotle",
+        "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/yphlv3a6uo7c9d5yi8ya",
+        "delivery_charge": 2,
+        "location": "Lojejerkrajan",
+        "ratings": 4,
+        "category": "Bowls",
+        "average_time": 18
+      },
+      {
+        "restaurant_name": "RPM Italian",
+        "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/f6yrj9g43rrlu4l6jcm8",
+        "delivery_charge": 1,
+        "location": "Pombal",
+        "ratings": 1,
+        "category": "Fine dining",
+        "average_time": 23
+      },
+      {
+        "restaurant_name": "Henry's Soul Cafe",
+        "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/oavoda8fpghems4enfsa",
+        "delivery_charge": 1,
+        "location": "Vërtop",
+        "ratings": 4,
+        "category": "Kids menu",
+        "average_time": 40
+      },
+      {
+        "restaurant_name": "Mason's Famous Lobster Rolls",
+        "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/epvxyhzb6s6zmltrundi",
+        "delivery_charge": 1,
+        "location": "Thành Phố Nam Định",
+        "ratings": 5,
+        "category": "Sandwiches",
+        "average_time": 23
+      }
+]

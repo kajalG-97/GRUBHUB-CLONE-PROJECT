@@ -1,0 +1,258 @@
+[
+  
+ 
+ 
+  {
+    "restaurant_name": "Sacrificial Lamb",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/rimecam6t6urony8mctq",
+    "delivery_charge": 2,
+    "location": "Santa Cruz da Graciosa",
+    "ratings": 5,
+    "category": "Indian",
+    "average_time": 30
+  },
+  {
+    "restaurant_name": "Bub and Pop's",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/cvsuzt4arggiodwyom5h",
+    "delivery_charge": 2,
+    "location": "Eira da Pedra",
+    "ratings": 4,
+    "category": "Breakfast",
+    "average_time": 20
+  },
+  {
+    "restaurant_name": "Rosemarino D'Italia DuPont",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/xqqlz9q9dr7jcqwxcsxl",
+    "delivery_charge": 1,
+    "location": "Sochaux",
+    "ratings": 2,
+    "category": "Dessert",
+    "average_time": 40
+  },
+  {
+    "restaurant_name": "Taylor Gourmet",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/eau4y5ieuy5ktge7q5u0",
+    "delivery_charge": 2,
+    "location": "Chaumont",
+    "ratings": 5,
+    "category": "Cheesesteaks",
+    "average_time": 36
+  },
+  {
+    "restaurant_name": "Baja Fresh",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/vjpk7ndrwcrnp0jkm9k0",
+    "delivery_charge": 2,
+    "location": "Nangkasari",
+    "ratings": 2,
+    "category": "Tex-Mex",
+    "average_time": 38
+  },
+  {
+    "restaurant_name": "Poki DC & Gong Cha",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/yovfasedaietikddwozp",
+    "delivery_charge": 1,
+    "location": "Cuenca",
+    "ratings": 3,
+    "category": "Asian",
+    "average_time": 38
+  },
+  {
+    "restaurant_name": "MrBeast Burger",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/midi5ceuusxubjoz4rbl",
+    "delivery_charge": 1,
+    "location": "Lunyuk Ode",
+    "ratings": 2,
+    "category": "American",
+    "average_time": 19
+  },
+  {
+    "restaurant_name": "Bandit Taco",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/rkp0zv1wo62p1b7zmblg",
+    "delivery_charge": 2,
+    "location": "Suphan Buri",
+    "ratings": 5,
+    "category": "Burritos",
+    "average_time": 23
+  },
+  {
+    "restaurant_name": "Corner Bakery",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/v5ww9ksugdzzlbqqkvka",
+    "delivery_charge": 1,
+    "location": "Sadananya",
+    "ratings": 5,
+    "category": "Coffe-Tea",
+    "average_time": 29
+  },
+  {
+    "restaurant_name": "Unconventional Diner",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/oiadh4yccv4bctvzvelu",
+    "delivery_charge": 1,
+    "location": "Santa Cruz",
+    "ratings": 1,
+    "category": "American",
+    "average_time": 17
+  },
+  {
+    "restaurant_name": "Asia 54",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/f9z9jhmhlxsw4xjnmnpj",
+    "delivery_charge": 1,
+    "location": "Manas",
+    "ratings": 3,
+    "category": "Asian",
+    "average_time": 21
+  },
+  {
+    "restaurant_name": "ALA Express",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/yxvc5uz8geh18betl6xd",
+    "delivery_charge": 2,
+    "location": "Yingcui",
+    "ratings": 5,
+    "category": "Mediterranean",
+    "average_time": 22
+  },
+  {
+    "restaurant_name": "Freebyrd",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/hfmasjyhqkpyvbhlat8m",
+    "delivery_charge": 1,
+    "location": "Dolgoprudnyy",
+    "ratings": 2,
+    "category": "American",
+    "average_time": 22
+  },
+  {
+    "restaurant_name": "Doi Moi",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/uvq9tatd6sstpzvuybqo",
+    "delivery_charge": 2,
+    "location": "Ouranoupolis",
+    "ratings": 2,
+    "category": "Asian",
+    "average_time": 16
+  },
+  {
+    "restaurant_name": "Thai Chef Restaurant",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/h8xg04m3fvaqj76idd8c",
+    "delivery_charge": 2,
+    "location": "Jiudu",
+    "ratings": 5,
+    "category": "Asian",
+    "average_time": 20
+  },
+  {
+    "restaurant_name": "Capitol City Brewing Company",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/jzdairtbgm0akbb3nzra",
+    "delivery_charge": 1,
+    "location": "Ejmiatsin",
+    "ratings": 2,
+    "category": "American",
+    "average_time": 26
+  },
+  {
+    "restaurant_name": "Arepa Zone",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/pvbwx51iai5zitbllbpu",
+    "delivery_charge": 1,
+    "location": "Palocabildo",
+    "ratings": 1,
+    "category": "American",
+    "average_time": 25
+  },
+  {
+    "restaurant_name": "House of Kabobs",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/s9ldywngskdxmmceeblx",
+    "delivery_charge": 1,
+    "location": "Pangkalan",
+    "ratings": 1,
+    "category": "American",
+    "average_time": 22
+  },
+  {
+    "restaurant_name": "Potbelly Sandwich Shop",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/f1fbslj3fqxugvfpmfbh",
+    "delivery_charge": 1,
+    "location": "Jarabacoa",
+    "ratings": 5,
+    "category": "Deli",
+    "average_time": 26
+  },
+  {
+    "restaurant_name": "Sol Mexican Grill",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/as8i5bwea7di48d5j4lr",
+    "delivery_charge": 1,
+    "location": "Tovačov",
+    "ratings": 3,
+    "category": "Grill",
+    "average_time": 29
+  },
+  {
+    "restaurant_name": "Jinya Ramen Bar",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/ey0lgwssrbtbvheq4egc",
+    "delivery_charge": 2,
+    "location": "Siuna",
+    "ratings": 4,
+    "category": "Deli",
+    "average_time": 22
+  },
+  {
+    "restaurant_name": "Panera Bread",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/zfkjsagaslxtjuwh5ieq",
+    "delivery_charge": 1,
+    "location": "Chashan",
+    "ratings": 3,
+    "category": "American",
+    "average_time": 37
+  },
+  {
+    "restaurant_name": "Chipotle",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/yphlv3a6uo7c9d5yi8ya",
+    "delivery_charge": 2,
+    "location": "Lojejerkrajan",
+    "ratings": 4,
+    "category": "Bowls",
+    "average_time": 18
+  },
+  {
+    "restaurant_name": "RPM Italian",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/f6yrj9g43rrlu4l6jcm8",
+    "delivery_charge": 1,
+    "location": "Pombal",
+    "ratings": 1,
+    "category": "Fine dining",
+    "average_time": 23
+  },
+  {
+    "restaurant_name": "Henry's Soul Cafe",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/oavoda8fpghems4enfsa",
+    "delivery_charge": 1,
+    "location": "Vërtop",
+    "ratings": 4,
+    "category": "Kids menu",
+    "average_time": 40
+  },
+  {
+    "restaurant_name": "Mason's Famous Lobster Rolls",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/epvxyhzb6s6zmltrundi",
+    "delivery_charge": 1,
+    "location": "Thành Phố Nam Định",
+    "ratings": 5,
+    "category": "Sandwiches",
+    "average_time": 23
+  },
+  {
+    "restaurant_name": "Five Guys",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/hkrzsptct0eoqk1a2z5h",
+    "delivery_charge": 1,
+    "location": "Benguela",
+    "ratings": 5,
+    "category": "American",
+    "average_time": 39
+  },
+  {
+    "restaurant_name": "Popeyes",
+    "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/ybndb3bauciokoumt8nx",
+    "delivery_charge": 1,
+    "location": "Berbérati",
+    "ratings": 3,
+    "category": "American",
+    "average_time": 15
+  }
+ 
+]

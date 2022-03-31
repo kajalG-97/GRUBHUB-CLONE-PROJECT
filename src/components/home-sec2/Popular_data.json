@@ -1,0 +1,38 @@
+[
+    {
+        "restaurant_name": "Five Guys",
+        "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/hkrzsptct0eoqk1a2z5h",
+        "delivery_charge": 1,
+        "location": "Benguela",
+        "ratings": 5,
+        "category": "American",
+        "average_time": 39
+      },
+      {
+        "restaurant_name": "Popeyes",
+        "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/ybndb3bauciokoumt8nx",
+        "delivery_charge": 1,
+        "location": "Berbérati",
+        "ratings": 3,
+        "category": "American",
+        "average_time": 15
+      },
+      {
+        "restaurant_name": "Cosi",
+        "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/ij4a2kiry4t37untedrm",
+        "delivery_charge": 1,
+        "location": "Höviyn Am",
+        "ratings": 5,
+        "category": "American",
+        "average_time": 32
+      },
+      {
+        "restaurant_name": "The Halal Guys",
+        "img_url": "https://res.cloudinary.com/grubhub/image/upload/d_search:browse-images:default.jpg/w_205,h_205,f_auto,fl_lossy,q_80,c_fill/kx7xvvyuy1mqiantexoa",
+        "delivery_charge": 2,
+        "location": "Lubaczów",
+        "ratings": 5,
+        "category": "Halal",
+        "average_time": 21
+      }
+]
