@@ -60,7 +60,7 @@ export const ResponsiveAppBar = () => {
 
                             sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
                         >
-                            <img src="https://seeklogo.com/images/S/swiggy-logo-8EF8260FA4-seeklogo.com.png" height="40px" />
+                            <img src="https://seekvectorlogo.com/wp-content/uploads/2021/12/grubhub-vector-logo-2021.png" alt="" style={{ width: "130px", height: "70px" }} />
                         </Typography>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -92,7 +92,7 @@ export const ResponsiveAppBar = () => {
                                     display: { xs: 'block', md: 'none' },
                                 }}
                             >
-                                <Button
+                                {/* <Button
                                     key={"Location"}
                                     onClick={handleCloseNavMenu}
                                     sx={{ my: 2, color: 'black', display: 'block' }}
@@ -105,8 +105,8 @@ export const ResponsiveAppBar = () => {
                                     sx={{ my: 2, color: 'black', display: 'block' }}
                                 >
                                     Product
-                                </Button>
-                                <Button
+                                </Button> */}
+                                {/* <Button
                                     key={"Cart"}
                                     onClick={() => {
                                         handleCloseNavMenu();
@@ -115,7 +115,7 @@ export const ResponsiveAppBar = () => {
                                     sx={{ my: 2, color: 'black', display: 'block' }}
                                 >
                                     Cart
-                                </Button>
+                                </Button> */}
                             </Menu>
 
                         </Box>
@@ -125,12 +125,12 @@ export const ResponsiveAppBar = () => {
                             component="div"
                             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
                         >
-                            <img src="https://seeklogo.com/images/S/swiggy-logo-8EF8260FA4-seeklogo.com.png" height="40px" />
+                            <img src="https://seekvectorlogo.com/wp-content/uploads/2021/12/grubhub-vector-logo-2021.png" alt="" style={{ width: "130px", height: "70px" }} />
                         </Typography>
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 
 
-                            <Button
+                            {/* <Button
                                 key={"Location"}
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'black', display: 'block' }}
@@ -143,8 +143,8 @@ export const ResponsiveAppBar = () => {
                                 sx={{ my: 2, color: 'black', display: 'block' }}
                             >
                                 Product
-                            </Button>
-                            <Button
+                            </Button> */}
+                            {/* <Button
                                 key={"Cart"}
                                 onClick={() => {
                                     handleCloseNavMenu();
@@ -153,7 +153,7 @@ export const ResponsiveAppBar = () => {
                                 sx={{ my: 2, color: 'black', display: 'block' }}
                             >
                                 Cart
-                            </Button>
+                            </Button> */}
 
 
 
