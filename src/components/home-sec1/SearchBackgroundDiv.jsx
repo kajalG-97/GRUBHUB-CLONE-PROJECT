@@ -1,7 +1,9 @@
+import { BImg, H1 } from "./style";
+
 export const SearchBackgroundDiv = () => {
     return (
-        <div className="SearchBackground">
-            hello
-        </div>  
+        <BImg className="SearchBackground">
+            <H1>Who delivers in your neighborhood?</H1>
+        </BImg>  
     );
 }
