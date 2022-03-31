@@ -12,7 +12,6 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import { Link, useNavigate } from 'react-router-dom';
-import { SignInSide } from './login';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 const pages = ['Location', 'Products', 'Cart'];
