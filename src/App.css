@@ -1,7 +1,3 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +31,69 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.ch-top-blue-nav {
+  background-color: #36286b;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ch-top-blue-nav > div {
+  font-weight: bold;
+  color: white;
+}
+.ch-img-cls {
+  display: flex;
+}
+.ch-img {
+  width: 50%;
+}
+.ch-img > img {
+  width: 100%;
+}
+.ch-btn-cls {
+  width: 50%;
+  padding: 30px;
+  margin-top: 20px;
+  display: block;
+}
+.ch-btn-one {
+  float: right;
+}
+.ch-btn-two {
+  margin-top: 200px;
+  margin-left: 50px;
+  float: center;
+  width: 500px;
+}
+.ch-btn-two > h1 {
+  font-size: 38px;
+}
+.ch-btn-two > input {
+  height: 30px;
+  width: 350px;
+}
+.ch-btn-two > button {
+  height: 35px;
+  width: 120px;
+  margin-left: 20px;
+  background-color: #0070eb;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+.ch-btn-link {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #0070eb;
+  font-weight: bold;
+  font-size: 20px;
+}
+.ch-lst > img {
+  width: 100%;
+}
+.autocomplete {
+  max-height: 150px;
 }
