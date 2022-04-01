@@ -29,13 +29,39 @@ export const SignUp=()=>{
      setData({...data,[id]:value })
    }
    const registerHandler=()=>{
-      axios.post("https://grubhub-backend-clone.herokuapp.com/register",data).then((res)=>{
+     // validation patterns 
+       const namepattern= new RegExp("[A-Za-z]")
+       const emailpattern=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+       const passwordPattern=/^(?=[^A-Z\n]*[A-Z])(?=[^a-z\n]*[a-z])(?=[^0-9\n]*[0-9])(?=[^#?!@$%^&*\n-]*[#?!@$%^&*-]).{8,}$/
+     if(!namepattern.test(data.firstName)){
+       toast.warn(" First Name must contain only alphabet",{
+         position:'top-center'
+       })
+     }
+     else if(!namepattern.test(data.lastName)){
+      toast.warn("Last Name must contain only alphabet",{
+        position:'top-center'
+      })
+    }
+    else if(!emailpattern.test(data.email)){
+      toast.warn("There must be a valid email id",{
+        position:'top-center'
+      })
+    }
+    else if(!passwordPattern.test(data.password)){
+      toast.warn("Password must be in alphanumeric format with special symbols and length of 8 characters",{
+        position:'top-center'
+      })
+    }
+      else{
+        axios.post("https://grubhub-backend-clone.herokuapp.com/register",data).then((res)=>{
         if(res){
           notify()
         }
       }).catch((error)=>{
          notify2()
       })
+      }
    }
     return (
         <>
@@ -60,10 +86,10 @@ export const SignUp=()=>{
       <Paper elevation={3}  sx={{padding:"30px" , display:"flex" ,flexDirection:"column" ,}}>
         <Typography variant='h3'  sx={{fontSize:"25px", fontWeight:"bold" ,marginBottom:"20px"}}>Create your account</Typography>
         <Box sx={{display:"flex" , gap:"10px"}}>
-        <TextField id="firstName" label="First Name"  variant="outlined" sx={{marginBottom:"25px"}}  onChange={getformData} />
+        <TextField id="firstName" label="First Name"  variant="outlined" sx={{marginBottom:"25px"}}  onChange={getformData}  type="text" required/>
         <TextField id="lastName" label="Last Name" variant="outlined" sx={{marginBottom:"25px"}}  onChange={getformData}/>
         </Box>
-        <TextField id="email" label="Email" variant="outlined" sx={{marginBottom:"25px"}}  onChange={getformData}/>
+        <TextField id="email" type={"email"} label="Email" variant="outlined" sx={{marginBottom:"25px"}}  onChange={getformData}/>
         <TextField id="password" label="Password (8 character minimum)" type='password' variant="outlined" sx={{marginBottom:"10px"}} onChange={getformData}/>
          <Box sx={{display:"flex" , justifyContent:"space-between" ,marginBottom:"15px"}} >
              <div><Checkbox /> <span>Keep me signed in</span> </div>

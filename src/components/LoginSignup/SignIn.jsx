@@ -12,6 +12,7 @@ import axios from "axios"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 export const SignIn=()=>{
+
   const notify = () => toast.success("Logged in Successfully",{
     position: "top-center"
   });
@@ -28,15 +29,31 @@ export const SignIn=()=>{
    }
   
    const loginHandler=()=>{
-    axios.post("https://grubhub-backend-clone.herokuapp.com/login" ,data).then((res)=>{
-      console.log(res);
-     if(res){
-        notify()
-     }
+     // validation of email and password 
+     const emailpattern=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+       const passwordPattern=/^(?=[^A-Z\n]*[A-Z])(?=[^a-z\n]*[a-z])(?=[^0-9\n]*[0-9])(?=[^#?!@$%^&*\n-]*[#?!@$%^&*-]).{8,}$/
      
-   }).catch((error)=>{
-     notify2()
-   })
+     if(!emailpattern.test(data.email)){
+      toast.warn("There must be a valid email id",{
+        position: 'top-center'
+      })
+     }
+     else if(!passwordPattern.test(data.password)){
+      toast.warn("Password must be in alphanumeric and min length of 8",{
+        position: 'top-center'
+      })
+     }
+        else{
+          axios.post("https://grubhub-backend-clone.herokuapp.com/login" ,data).then((res)=>{
+            console.log(res);
+           if(res){
+              notify()
+           }
+           
+         }).catch((error)=>{
+           notify2()
+         })
+        }
    }
   
     return (
@@ -55,11 +72,14 @@ export const SignIn=()=>{
         marginTop:"20px",
     
       }}
+      component="form"
+      noValidate
+      autoComplete='off'
     >
       <Paper elevation={3}  sx={{padding:"30px" , display:"flex" ,flexDirection:"column" ,}}>
         <Typography variant='h3'  sx={{fontSize:"25px", fontWeight:"bold" ,marginBottom:"20px"}}>Sign in with your Grubhub account</Typography>
-        <TextField id="email" label="Email" variant="outlined" sx={{marginBottom:"25px"}}  onChange={getformData}/>
-        <TextField id="password" label="Password" type='password' variant="outlined" sx={{marginBottom:"10px"}} onChange={getformData}/>
+        <TextField id="email" label="Email" variant="outlined" sx={{marginBottom:"25px"}}  onChange={getformData} required/>
+        <TextField id="password" label="Password" type='password' variant="outlined" sx={{marginBottom:"10px"}} onChange={getformData} required/>
          <Box sx={{display:"flex" , justifyContent:"space-between" ,marginBottom:"15px"}} >
              <div><Checkbox /> <span>Keep me signed in</span> </div>
              <Typography variant='h6' sx={{fontSize:"14px", marginTop:"9px" ,marginRight:'10px'}}>Reset password</Typography>
