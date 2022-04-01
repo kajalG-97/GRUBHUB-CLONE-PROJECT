@@ -1,5 +1,4 @@
-import { Button } from "@mui/material";
-import { width } from "@mui/system";
+
 import React, { useRef, useState } from "react";
 
 const data = [
@@ -30,7 +29,7 @@ const TopBar = () => {
 const Menu = (allDishes) => {
   let datafinal = allDishes.allDishes;
 
-  console.log(datafinal);
+  // console.log(datafinal);
 
   // datafinal.filter( (e1) => {
   //     if (e1.category == "chicken") {
