@@ -1,16 +1,26 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router";
 
 export default function Image({ url }) {
   let arrow = "<";
-  let imgUrl =
-    "https://media-cdn.grubhub.com/image/upload/d_search:browse-images:default.jpg/w_1200,h_300,f_auto,q_auto,dpr_auto,g_auto,c_fill/kzesqadyjqyqgnhwdkzs";
+  // let imgUrl =
+  //   "https://media-cdn.grubhub.com/image/upload/d_search:browse-images:default.jpg/w_1200,h_300,f_auto,q_auto,dpr_auto,g_auto,c_fill/kzesqadyjqyqgnhwdkzs";
+
+  const [singleData, setSingleData] = useState([]);
+  const { name } = useParams();
+  useEffect(() => {
+    axios
+      .get(`https://grubhub-backend-clone.herokuapp.com/restaurant/${name}`)
+      .then((res) => setSingleData(...res.data));
+  },);
 
   return (
     <div className="image" style={{ height: "200px", marginTop: "50px" }}>
       {/* background Image */}
       <img
         style={{ height: "100%", maxWidth: "100%", width: "100%" }}
-        src={imgUrl}
+        src={singleData.image}
         alt=""
       />
 

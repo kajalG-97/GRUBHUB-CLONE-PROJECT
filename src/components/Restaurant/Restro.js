@@ -5,13 +5,15 @@ import axios from "axios";
 import Image from "./Image";
 
 export default function Restro() {
+
+
   const [singleData, setSingleData] = useState([]);
   const { name } = useParams();
   useEffect(() => {
     axios
       .get(`https://grubhub-backend-clone.herokuapp.com/restaurant/${name}`)
       .then((res) => setSingleData(...res.data));
-  }, []);
+  }, );
 
   return (
     <>
