@@ -18,7 +18,10 @@ export default function Image({ url }) {
   });
 
   return (
-    <div className="image" style={{ height: "270px", marginTop: "50px", margin: "auto" }}>
+    <div
+      className="image"
+      style={{ height: "270px", marginTop: "50px", margin: "auto" }}
+    >
       {/* background Image */}
       <img
         style={{ height: "100%", width: "100%" }}
