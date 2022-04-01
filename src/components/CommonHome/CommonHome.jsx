@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useCallback, useState } from "react";
+import { Footer } from "../home-sec2/section2";
 export const CommonHome = () => {
   const [suggestions, setSuggestions] = useState("");
 
@@ -86,6 +87,7 @@ export const CommonHome = () => {
           alt=""
         />
       </div>
+      <Footer />
     </div>
   );
 };
