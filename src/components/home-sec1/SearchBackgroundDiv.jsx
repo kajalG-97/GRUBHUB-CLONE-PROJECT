@@ -10,8 +10,8 @@ export const SearchBackgroundDiv = () => {
         <BImg className="SearchBackground">
             <H1>{htag}</H1>
             {/* <H1>Who delivers in your neighborhood?</H1> */}
-            <button onClick={()=> setHtag("madhan")}>a1</button>
-            <button onClick={() => setHtag("mohan")}>a2</button>
+            <button onClick={() => setHtag("Who delivers in your neighborhood?")}>a1</button>
+            <button onClick={() => setHtag("fghjkl")}>a2</button>
         </BImg>  
     );
 }
