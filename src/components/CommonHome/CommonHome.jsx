@@ -67,7 +67,9 @@ export const CommonHome = () => {
               <div className="autocomplete">
                 {suggestions.map((el, i) => (
                   <div key={i} className="autocompleteItems">
-                    <Link to={"/"}>{el.restaurant_name}</Link>
+                    <Link to={`/restaurant/${el.restaurant_name}`}>
+                      {el.restaurant_name}
+                    </Link>
                   </div>
                 ))}
               </div>
