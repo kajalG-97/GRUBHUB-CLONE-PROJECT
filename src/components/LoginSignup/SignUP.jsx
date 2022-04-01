@@ -29,6 +29,33 @@ export const SignUp=()=>{
      setData({...data,[id]:value })
    }
    const registerHandler=()=>{
+     // validation for email ,name and password
+     const namepattern= /[a-zA-Z]/
+     const emailpattern=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+     const passwordPattern=/^(?=[^A-Z\n]*[A-Z])(?=[^a-z\n]*[a-z])(?=[^0-9\n]*[0-9])(?=[^#?!@$%^&*\n-]*[#?!@$%^&*-]).{8,}$/
+     
+     if(!namepattern.test(data.firstName)){
+      toast.warn("First Name must contain  only alphabates" ,{
+        position:"top-center"
+      })
+    }
+    else if(!namepattern.test(data.lastName)){
+      toast.warn("Last Name must contain  only alphabates" ,{
+        position:"top-center"
+      })
+    }
+     else if(!emailpattern.test(data.email)){
+       toast.warn("There must be a valid email address" ,{
+         position:"top-center"
+       })
+     }
+     else if(!passwordPattern.test(data.password)){
+       toast.warn("Password must be in Alphanumeric format and min length of 8" ,{
+         position:"top-center"
+       })
+     }
+    
+     else{
       axios.post("https://grubhub-backend-clone.herokuapp.com/register",data).then((res)=>{
         if(res){
           notify()
@@ -36,6 +63,7 @@ export const SignUp=()=>{
       }).catch((error)=>{
          notify2()
       })
+    }
    }
     return (
         <>

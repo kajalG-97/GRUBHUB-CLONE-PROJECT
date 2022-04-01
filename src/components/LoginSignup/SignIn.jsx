@@ -39,6 +39,20 @@ export const SignIn = () => {
   };
 
   const loginHandler = () => {
+    // validation for email and password
+    const emailpattern=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const passwordPattern=/^(?=[^A-Z\n]*[A-Z])(?=[^a-z\n]*[a-z])(?=[^0-9\n]*[0-9])(?=[^#?!@$%^&*\n-]*[#?!@$%^&*-]).{8,}$/
+    if(!emailpattern.test(data.email)){
+      toast.warn("There must be a valid email address" ,{
+        position:"top-center"
+      })
+    }
+    else if(!passwordPattern.test(data.password)){
+      toast.warn("Password must be in Alphanumeric format and min length of 8" ,{
+        position:"top-center"
+      })
+    }
+    else{
     axios
       .post("https://grubhub-backend-clone.herokuapp.com/login", data)
       .then((res) => {
@@ -51,6 +65,7 @@ export const SignIn = () => {
       .catch((error) => {
         notify2();
       });
+    }
   };
 
   return (
