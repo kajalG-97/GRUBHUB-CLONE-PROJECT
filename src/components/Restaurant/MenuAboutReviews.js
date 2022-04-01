@@ -8,6 +8,7 @@ import imageOfMap from "./location.png";
 const handleCart = () => {
   console.log("cart");
 };
+
 const TopBar = () => {
   return (
     <div className="topbar" style={{ marginTop: "15px" }}>
@@ -57,8 +58,6 @@ const Chicken = (chickenDishes) => {
               >
                 {dish.description}
               </p>
-              {/* button */}
-              <button onClick={handleCart}>Add to cart</button>
             </div>
             <div
               style={{
@@ -70,12 +69,17 @@ const Chicken = (chickenDishes) => {
                 style={{
                   marginRight: "12px",
                   marginTop: "12px",
-                  height: "100px",
+                  height: "80px",
                 }}
                 src={dish.image}
                 alt=""
               />
               <p className="price"> $ {dish.price}.00+</p>
+
+              <div>
+                {/* button */}
+                <button onClick={handleCart}>Add to cart</button>
+              </div>
             </div>
           </div>
         ))}
@@ -122,6 +126,7 @@ const Smoothies = (smoothiesDishes) => {
               >
                 {dish.description}
               </p>
+
             </div>
 
             <div
@@ -134,12 +139,17 @@ const Smoothies = (smoothiesDishes) => {
                 style={{
                   marginRight: "12px",
                   marginTop: "12px",
-                  height: "100px",
+                  height: "80px",
                 }}
                 src={dish.image}
                 alt=""
               />
               <p className="price"> $ {dish.price}.00+</p>
+
+              <div>
+                {/* button */}
+                <button onClick={handleCart}>Add to cart</button>
+              </div>
             </div>
           </div>
         ))}
@@ -186,6 +196,7 @@ const Appetizers = (appetizersDishes) => {
               >
                 {dish.description}
               </p>
+
             </div>
 
             <div
@@ -199,12 +210,17 @@ const Appetizers = (appetizersDishes) => {
                 style={{
                   marginRight: "12px",
                   marginTop: "12px",
-                  height: "100px",
+                  height: "80px",
                 }}
                 src={dish.image}
                 alt=""
               />
               <p className="price"> $ {dish.price}.00+</p>
+
+              <div>
+                {/* button */}
+                <button onClick={handleCart}>Add to cart</button>
+              </div>
             </div>
           </div>
         ))}
@@ -252,6 +268,8 @@ const FF = (FfDishes) => {
               >
                 {dish.description}
               </p>
+
+
             </div>
 
             <div
@@ -264,12 +282,15 @@ const FF = (FfDishes) => {
                 style={{
                   marginRight: "12px",
                   marginTop: "12px",
-                  height: "100px",
+                  height: "80px",
                 }}
                 src={dish.image}
                 alt=""
               />
-              <p className="price"> $ {dish.price}.00+</p>
+              <p className="price"> $ {dish.price}.00+</p><div>
+                {/* button */}
+                <button onClick={handleCart}>Add to cart</button>
+              </div>
             </div>
           </div>
         ))}
@@ -316,6 +337,7 @@ const BFD = (BfdDishes) => {
               >
                 {dish.description}
               </p>
+
             </div>
 
             <div
@@ -328,12 +350,15 @@ const BFD = (BfdDishes) => {
                 style={{
                   marginRight: "12px",
                   marginTop: "12px",
-                  height: "100px",
+                  height: "80px",
                 }}
                 src={dish.image}
                 alt=""
               />
-              <p className="price"> $ {dish.price}.00+</p>
+              <p className="price"> $ {dish.price}.00+</p><div>
+                {/* button */}
+                <button onClick={handleCart}>Add to cart</button>
+              </div>
             </div>
           </div>
         ))}
