@@ -13,8 +13,9 @@ height:330px;
 `
 export const H1 = styled.h1`
 color:white;
-padding-left:300px;
-padding-top: 70px;
+padding-left:30%;
+padding-top: 20%;
  font-weight: 700;
+ font-size : 100%;
 
 `
