@@ -1,0 +1,140 @@
+.navbar{
+    width: 100%;
+    justify-content: space-between;
+    top: 0px;
+    background-color: white ;
+    position: fixed;
+    height: 73px;
+    z-index: 1
+}
+.arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #f00;
+  }
+
+  .image .btn{
+
+    position: absolute;
+    height: 45px;
+    top: 20%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: white;
+    color: blue;
+    font-size: 16px;
+    padding: 0px 3px;
+    border: none;
+    font-size: xx-large;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 16px;
+
+  }
+  .image .btn2{
+    position: absolute;
+    height: 45px;
+    top: 20%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: white;
+    color: blue;
+    font-size: 16px;
+    padding: 0px 3px;
+    border: none;
+    font-size: xx-large;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 16px;
+
+  }
+  .image .btn3{
+    position: absolute;
+    height: 45px;
+    top: 20%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: white;
+    color: blue;
+    font-size: 16px;
+    padding: 0px 3px;
+    border: none;
+    font-size: xx-large;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 16px;
+
+  }
+
+  .image .btn4{
+    position: absolute;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: white;
+    color: blue;
+    font-size: 16px;
+    padding: 0px 3px;
+    border: none;
+    font-size: xx-large;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  }
+
+
+  .restro{
+
+    width: 80%;
+    margin: auto;
+    height: 100px;
+    
+
+  }
+.restro > h1{
+    
+    margin-top: 5px;
+}
+
+
+.topbar>button{
+color: #8e8e8f;
+border: none;
+background-color: white;
+font-size:medium;
+cursor: pointer;
+
+}
+
+.topbar>button:hover{
+  color:black;
+  font-weight: bold;
+
+}
+
+.topbar>button:focus{
+  
+  text-decoration: underline;
+  color:black;
+  font-weight: bold;
+}
+
+.itemDiv{
+
+  padding: 12px; 
+  border: 1px solid #ccc6e6; 
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
+  border-radius: 10px 
+}
+
+.itemDiv:hover{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
