@@ -20,9 +20,9 @@ import SearchAppBar from "./SearchBar";
 // }
 
 export const SearchBackgroundDiv = () => {
-    const [htag, setHtag] = useState("Who delivers in your neighborhood?");
-    console.log('htag', htag);
-    
+  const [htag, setHtag] = useState("Who delivers in your neighborhood?");
+  console.log("htag", htag);
+
 
     return (
         <BImg className="SearchBackground">
@@ -35,3 +35,4 @@ export const SearchBackgroundDiv = () => {
         </BImg>  
     );
 }
+
