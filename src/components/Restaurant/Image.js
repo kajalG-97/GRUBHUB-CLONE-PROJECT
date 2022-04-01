@@ -13,13 +13,13 @@ export default function Image({ url }) {
     axios
       .get(`https://grubhub-backend-clone.herokuapp.com/restaurant/${name}`)
       .then((res) => setSingleData(...res.data));
-  },);
+  });
 
   return (
     <div className="image" style={{ height: "200px", marginTop: "50px" }}>
       {/* background Image */}
       <img
-        style={{ height: "100%", maxWidth: "100%", width: "100%" }}
+        style={{ height: "100%", width: "100%" }}
         src={singleData.image}
         alt=""
       />

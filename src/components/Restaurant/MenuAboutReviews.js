@@ -344,18 +344,133 @@ const About = (aboutRest) => {
   );
 };
 
-const Reviews = () => {
+const Reviews = (aboutRest) => {
+
+  let data2 = aboutRest.aboutRest;
+
+  const [selected, setSelected] = useState("Most Recent");
+
+  function handleChange(event) {
+    setSelected(event.target.value)
+  }
+
+  // console.log(data2.restaurant_name);
   return (
-    <div
-      style={{
-        height: "250px",
-        border: "1px solid black",
-      }}
-    >
-      {data[0].ratings}
+    <div>
+      <h3 style={{ marginLeft: "12px" }}>Reviews for {data2.restaurant_name}</h3>
+      <img style={{ height: "45px", marginTop: "-20px" }} src="https://t4.ftcdn.net/jpg/02/74/86/43/360_F_274864312_uNlm9yCpdViwKzHkCp0sOBrmJFN0pKAa.jpg" alt="" />
+      <p style={{ color: "#6B6B83", marginTop: "-15px", fontSize: "small", marginLeft: "12px" }}>48 ratings</p>
+
+      <p style={{ fontWeight: "400", fontSize: "smaller", marginLeft: "12px" }}>Here's what people are saying:</p>
+
+      <div style={{ display: "flex", gap: "24px" }}>
+
+        <div style={{ marginLeft: "12px" }}>
+          <p style={{ fontWeight: "bold", }}>87%</p>
+          <p style={{ fontSize: "smaller", color: "#6B6B83", marginTop: "-15px", }}>Food was</p>
+          <p style={{ fontSize: "smaller", color: "#6B6B83", marginTop: "-15px", }}>good</p>
+        </div>
+
+        <div style={{ marginLeft: "12px" }}>
+          <p style={{ fontWeight: "bold", }}>94%</p>
+          <p style={{ fontSize: "smaller", color: "#6B6B83", marginTop: "-15px", }}>Delivery </p>
+          <p style={{ fontSize: "smaller", color: "#6B6B83", marginTop: "-15px", }}>was on time</p>
+        </div>
+
+        <div style={{ marginLeft: "12px" }}>
+          <p style={{ fontWeight: "bold", }}>88%</p>
+          <p style={{ fontSize: "smaller", color: "#6B6B83", marginTop: "-15px", }}>Order was</p>
+          <p style={{ fontSize: "smaller", color: "#6B6B83", marginTop: "-15px", }}>accurate</p>
+        </div>
+
+      </div>
+      <hr />
+
+      {/* sort select tag */}
+      <div style={{ textAlign: "right", marginRight: "12px" }}>
+        <label style={{ color: "#6B6B83", }}>
+          Sort by:
+          <select style={{ padding: "8px", marginLeft: "15px", borderRadius: "5px" }} value={selected} onChange={handleChange}>
+            <option value="mostrecent">Most recent</option>
+            <option value="highest">Highest rated</option>
+          </select>
+        </label>
+      </div>
+
+      {/* reviews  */}
+
+      {/* first */}
+      <div style={{ display: "flex", height: "60px" }}>
+
+        <img style={{ height: "50px" }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Eo_circle_light-blue_white_letter-r.svg/1200px-Eo_circle_light-blue_white_letter-r.svg.png" alt="" />
+        <div style={{ marginLeft: "10px" }}>
+
+          <p style={{ marginTop: "0px", fontWeight: "bold" }}>Renay</p>
+          <div style={{ display: "flex" }}>
+            <img style={{ height: "15px", marginTop: "-10px" }} src="https://birthambassadors.files.wordpress.com/2014/06/smooth-star.jpg" alt="" />
+            <p style={{ height: "15px", marginTop: "-12px", marginLeft: "12px", color: "#6B6B83", fontSize: "smaller" }}>4 reviews</p>
+          </div>
+
+        </div>
+
+        <p style={{ marginLeft: "850px", color: "#6B6B83", fontSize: "smaller" }}>
+          Sep 14, 2021</p>
+
+      </div>
+
+      {/* with / after 3 stars */}
+
+      <img style={{ height: "50px", marginTop: "-10px" }} src="https://st3.depositphotos.com/20148636/32849/v/950/depositphotos_328493216-stock-illustration-star-rating-vector-isolated-golden.jpg?forcejpeg=true" alt="" />
+
+      <p style={{ marginLeft: "12px", marginTop: "-10px" }}>The food was good however sandwich was soggyyet still tasty</p>
+
+      <p style={{ color: "#6B6B83", fontSize: "smaller", marginLeft: "12px", }}>Renay ordered:</p>
+
+      <div style={{ display: "flex", gap: "30px", marginLeft: "12px", height: "32px" }}>
+        <div className="reviewItems" style={{ cursor: "pointer", whiteSpace: "nowrap", backgroundColor: "#F2F2F2", width: "180px", borderRadius: "3px", textAlign: "center" }}>{data2.restaurant_name}'s Toast+ </div>
+        <div className="reviewItems" style={{ cursor: "pointer", whiteSpace: "nowrap", backgroundColor: "#F2F2F2", width: "180px", borderRadius: "3px", textAlign: "center" }}>Build Your Breakfast + </div>
+        <div className="reviewItems" style={{ cursor: "pointer", whiteSpace: "nowrap", backgroundColor: "#F2F2F2", width: "180px", borderRadius: "3px", textAlign: "center" }}>Crispy Chicken Sandw..+ </div>
+      </div>
+      <br />
+
+      {/* second */}
+      <div style={{ display: "flex", height: "60px" }}>
+
+        <img style={{ height: "50px" }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Eo_circle_light-blue_letter-g.svg/1200px-Eo_circle_light-blue_letter-g.svg.png" alt="" />
+        <div style={{ marginLeft: "10px" }}>
+
+          <p style={{ marginTop: "0px", fontWeight: "bold" }}>German</p>
+          <div style={{ display: "flex" }}>
+            <img style={{ height: "15px", marginTop: "-10px" }} src="https://birthambassadors.files.wordpress.com/2014/06/smooth-star.jpg" alt="" />
+            <p style={{ height: "15px", marginTop: "-12px", marginLeft: "12px", color: "#6B6B83", fontSize: "smaller" }}>2 reviews</p>
+          </div>
+
+        </div>
+
+        <p style={{ marginLeft: "850px", color: "#6B6B83", fontSize: "smaller" }}>
+          Aug 20, 2021</p>
+
+      </div>
+
+      {/* with / after 3 stars */}
+
+      <img style={{ height: "30px", marginTop: "-10px" }} src="https://t4.ftcdn.net/jpg/03/69/04/01/360_F_369040116_CCwMAKzk0u6R60lLhNS4LDlOGL4bXilZ.jpg" alt="" />
+
+      <p style={{ marginLeft: "12px", marginTop: "-1px" }}>Best damn food omg</p>
+
+      <p style={{ color: "#6B6B83", fontSize: "smaller", marginLeft: "12px", }}>German ordered:</p>
+
+      <div style={{ display: "flex", gap: "30px", marginLeft: "12px", height: "32px" }}>
+        <div className="reviewItems" style={{ cursor: "pointer", whiteSpace: "nowrap", backgroundColor: "#F2F2F2", width: "180px", borderRadius: "3px", textAlign: "center" }}>{data2.restaurant_name} Toast+ </div>
+        <div className="reviewItems" style={{ cursor: "pointer", whiteSpace: "nowrap", backgroundColor: "#F2F2F2", width: "180px", borderRadius: "3px", textAlign: "center" }}>Canned Soda + </div>
+      </div>
+
+      <hr />
     </div>
   );
 };
+
+
 
 export default function MenuAboutReviews() {
 
@@ -446,7 +561,7 @@ export default function MenuAboutReviews() {
 
       <About aboutRest={singleData} />
 
-      <Reviews />
+      <Reviews aboutRest={singleData} />
     </div>
   );
 }
