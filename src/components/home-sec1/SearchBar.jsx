@@ -8,19 +8,22 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import AddLocationIcon from '@mui/icons-material/AddLocation';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
+    backgroundColor: alpha(theme.palette.common.white,100),
     '&:hover': {
-        backgroundColor: alpha(theme.palette.common.white, 0.25),
+        backgroundColor: alpha(theme.palette.common.white, 0.75),
     },
     marginLeft: 0,
     width: '100%',
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
         marginLeft: theme.spacing(1),
-        width: 'auto',
+        width: 230,
     },
 }));
 
@@ -53,7 +56,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function SearchAppBar() {
     return (
-        <Box sx={{ flexGrow: 1 }}>
+
+        <Box>
+            <Box sx={{ flexGrow: 1, alignItems: 'center',justifyContent: 'center',display: { xs: "none", md: "flex" }}}>
            
                    
                     <Search>
@@ -64,8 +69,45 @@ export default function SearchAppBar() {
                             placeholder="Search…"
                             inputProps={{ 'aria-label': 'search' }}
                         />
-                    </Search>
+            </Search>
+            <Search>
+                <SearchIconWrapper>
+                    <SearchIcon />
+                </SearchIconWrapper>
+                <StyledInputBase
+                    placeholder="Search…"
+                    inputProps={{ 'aria-label': 'search' }}
+                />
+                </Search>
+                <Button variant="contained">Search Nearby</Button>
                
+        </Box>
+
+            <Box sx={{ flexGrow: 1, width: 300, justifyContent: 'center',display: { xs: "block", md: "none" }}}>
+           
+                   
+                    <Search>
+                        <SearchIconWrapper>
+                            <SearchIcon />
+                        </SearchIconWrapper>
+                        <StyledInputBase
+                            placeholder="Search…"
+                            inputProps={{ 'aria-label': 'search' }}
+                        />
+            </Search>
+            <Search>
+                <SearchIconWrapper>
+                    <SearchIcon />
+                </SearchIconWrapper>
+                <StyledInputBase
+                    placeholder="Search…"
+                    inputProps={{ 'aria-label': 'search' }}
+                />
+                </Search>
+                
+                <Button variant="contained">Search Nearby</Button>
+               
+            </Box>
         </Box>
     );
 }

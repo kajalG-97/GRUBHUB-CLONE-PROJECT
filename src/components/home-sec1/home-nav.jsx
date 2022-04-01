@@ -107,18 +107,18 @@ export const ResponsiveAppBar = () => {
               }}
             >
               <Button
-                key={"Location"}
+                key={"Catering"}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "black", display: "block" }}
               >
-                Location
+                Catering
               </Button>
               <Button
-                key={"Products"}
+                key={"Hi! Kajal"}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "black", display: "block" }}
               >
-                Product
+                Hi! Kajal
               </Button>
             </Box>
 
