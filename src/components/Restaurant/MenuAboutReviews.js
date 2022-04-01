@@ -1,5 +1,9 @@
 
-import React, { useRef, useState } from "react";
+import axios from "axios";
+import React, { useEffect, useRef, useState } from "react";
+import { useParams } from "react-router";
+
+import imageOfMap from "./location.png"
 
 const data = [
   {
@@ -26,207 +30,251 @@ const TopBar = () => {
   );
 };
 
-const Menu = (allDishes) => {
-  let datafinal = allDishes.allDishes;
 
-  // console.log(datafinal);
+const Chicken = (chickenDishes) => {
 
-  // datafinal.filter( (e1) => {
-  //     if (e1.category == "chicken") {
 
-  //         console.log(e1)
-  //     }
-  // })
+  let allChickenDishes = chickenDishes.chickenDishes;
+
+  // console.log(allChickenDishes);
 
   return (
-    <>
-      <div
-        style={{
-          marginTop: "15px",
-          border: "1px solid red",
-        }}
-      >
-        <div
-          style={{
-            justifyContent: "center",
-            display: "flex",
-            height: "50px",
-            textAlign: "center",
-          }}
-        >
-          <p style={{ color: "red" }}>Closed. </p>
+    <div style={{ marginTop: "-10px" }}>
+      <br />
+      <h3>Chicken</h3>
+      <div style={{
+        margin: "auto",
+        width: "100%",
+        display: "grid",
+        gridTemplateColumns: "49% 49%",
+        gridTemplateRows: "120px 120px",
+        gap: "2%",
+      }}>{
 
-          <p>Next Delivery at 10:00pm.</p>
+          allChickenDishes.map((dish) =>
 
-          <button
-            style={{
-              textTransform: "none",
-              color: "white",
-              marginLeft: "50px",
-              backgroundColor: "blue",
-              height: "40px",
-              width: "100px",
-              marginTop: "10px",
-              border: "none",
-              padding: "10px",
-              borderRadius: "5px",
-              fontWeight: "bold",
-              cursor: "pointer",
-            }}
-            variant="contained"
-          >
-            Preorder
-          </button>
-        </div>
-        <hr />
+            <div className='items' style={{ border: "1px solid #CCC5E4", width: "100%", display: "flex", borderRadius: "5px" }}>
 
-        <h2 style={{ marginTop: "-10px" }}>Appetizers</h2>
+              <div style={{ justifyContent: "space-between" }}>
+                <p style={{ marginLeft: "12px", fontWeight: "bold" }}>{dish.dish_name}</p>
 
-        {/* restro items/ food products */}
+                <p style={{ margin: "12px", marginTop: "-10px", color: "#6B6B83" }}>{dish.description}</p>
 
-        <div style={{ marginTop: "0px" }}>
-          {/* <Items />
-                    <Items />
-                    <Items />
-                    <Items />
-                    <Items />
-                    <Items />
-                    <Items />
-                    <Items /> */}
-        </div>
+              </div>
+
+              <div style={{
+                position: "relative"
+              }}>
+
+                <img className='itemImg' style={{ marginRight: "12px", marginTop: "12px", height: "100px", }} src={dish.image} alt="" />
+                <p className='price'> $ {dish.price}.00+</p>
+              </div>
+
+
+            </div>
+          )}
       </div>
 
-      <div
-        style={{
-          marginTop: "15px",
-          border: "1px solid red",
-        }}
-      >
-        <h2 style={{ marginTop: "-5px" }}>Chicken</h2>
+    </div>
+  )
+}
 
-        {/* <SideItems />
-                <SideItems /> */}
-      </div>
-    </>
-  );
-};
+const Smoothies = (smoothiesDishes) => {
 
-const Items = () => {
+  let allSmoothiesDishes = smoothiesDishes.smoothiesDishes;
+
+  // console.log(allSmoothiesDishes);
   return (
-    <div style={{ display: "flex", gap: "22px", marginTop: "11px" }}>
-      <div className="itemDiv" style={{}}>
-        <div style={{ display: "flex", display: "inline-block" }}>
-          <p style={{ fontWeight: "bold", float: "left", marginLeft: "12px" }}>
-            Steak & Cheese
-          </p>
-          <p
-            style={{ fontWeight: "bold", float: "right", marginLeft: "300px" }}
-          >
-            $12.00
-          </p>
-        </div>
+    <div>
 
-        <p
-          style={{
-            marginTop: "0px",
-            marginLeft: "12px",
-            marginRight: "12px",
-            color: "#6B6B83",
-          }}
-        >
-          Ribeye steak dice with onion and pepper smother in mix cheese served
-          on a hogie roll.
-        </p>
-      </div>
+      <br />
+      <h3>Smoothies</h3>
+      <div style={{
+        margin: "auto",
+        width: "100%",
+        display: "grid",
+        gridTemplateColumns: "49% 49%",
+        gridTemplateRows: "120px 120px",
+        gap: "2%",
+      }}>{
 
-      <div className="itemDiv" style={{}}>
-        <div style={{ display: "flex", display: "inline-block" }}>
-          <p style={{ fontWeight: "bold", float: "left", marginLeft: "12px" }}>
-            Steak & Cheese
-          </p>
-          <p
-            style={{ fontWeight: "bold", float: "right", marginLeft: "300px" }}
-          >
-            $12.00
-          </p>
-        </div>
+          allSmoothiesDishes.map((dish) =>
 
-        <p
-          style={{
-            marginTop: "0px",
-            marginLeft: "12px",
-            marginRight: "12px",
-            color: "#6B6B83",
-          }}
-        >
-          Ribeye steak dice with onion and pepper smother in mix cheese served
-          on a hogie roll.
-        </p>
+            <div className='items' style={{ border: "1px solid #CCC5E4", width: "100%", display: "flex", borderRadius: "5px" }}>
+
+              <div style={{ justifyContent: "space-between" }}>
+                <p style={{ marginLeft: "12px", fontWeight: "bold" }}>{dish.dish_name}</p>
+
+                <p style={{ margin: "12px", marginTop: "-10px", color: "#6B6B83" }}>{dish.description}</p>
+
+              </div>
+
+              <div style={{
+                position: "relative"
+              }}>
+
+                <img className='itemImg' style={{ marginRight: "12px", marginTop: "12px", height: "100px", }} src={dish.image} alt="" />
+                <p className='price'> $ {dish.price}.00+</p>
+              </div>
+
+
+            </div>
+          )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-const SideItems = () => {
+const Appetizers = (appetizersDishes) => {
+
+  let allAppetizersDishes = appetizersDishes.appetizersDishes;
+
+  // console.log(allAppetizersDishes);
   return (
-    <div style={{ display: "flex", gap: "22px", marginTop: "11px" }}>
-      <div className="itemDiv" style={{ width: "50%" }}>
-        <div style={{ display: "flex", display: "inline-block" }}>
-          <p style={{ fontWeight: "bold", float: "left", marginLeft: "12px" }}>
-            Fries
-          </p>
-          <p
-            style={{ fontWeight: "bold", float: "right", marginLeft: "300px" }}
-          >
-            $5.00
-          </p>
-        </div>
 
-        <p
-          style={{
-            marginTop: "0px",
-            marginLeft: "12px",
-            marginRight: "12px",
-            color: "#6B6B83",
-          }}
-        >
-          Fried potatoes.
-        </p>
-      </div>
+    <div>
+      <br />
+      <h3>Appetizers</h3>
+      <div style={{
+        margin: "auto",
+        width: "100%",
+        display: "grid",
+        gridTemplateColumns: "49% 49%",
+        gridTemplateRows: "120px 120px",
+        gap: "2%",
+      }}>{
 
-      <div className="itemDiv" style={{ width: "50%" }}>
-        <div style={{ display: "flex", display: "inline-block" }}>
-          <p style={{ fontWeight: "bold", float: "left", marginLeft: "12px" }}>
-            Onion Ring
-          </p>
-          <p
-            style={{ fontWeight: "bold", float: "right", marginLeft: "300px" }}
-          >
-            $5.00
-          </p>
-        </div>
+          allAppetizersDishes.map((dish) =>
 
-        <p
-          style={{
-            marginTop: "0px",
-            marginLeft: "12px",
-            marginRight: "12px",
-            color: "#6B6B83",
-          }}
-        >
-          Fried battered onion.
-        </p>
+            <div className='items' style={{ border: "1px solid #CCC5E4", width: "100%", display: "flex", borderRadius: "5px" }}>
+
+              <div style={{ justifyContent: "space-between" }}>
+                <p style={{ marginLeft: "12px", fontWeight: "bold" }}>{dish.dish_name}</p>
+
+                <p style={{ margin: "12px", marginTop: "-10px", color: "#6B6B83" }}>{dish.description}</p>
+
+              </div>
+
+              <div style={{
+                position: "relative", float: "right",
+              }}>
+
+                <img className='itemImg' style={{ marginRight: "12px", marginTop: "12px", height: "100px", }} src={dish.image} alt="" />
+                <p className='price'> $ {dish.price}.00+</p>
+              </div>
+
+
+            </div>
+          )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-const About = () => {
+const FF = (FfDishes) => {
+
+  let allFfDishes = FfDishes.FfDishes;
+
+  // console.log(allFfDishes);
+
+  return (
+
+    <div>
+      <br />
+      <h3>Fillet fish</h3>
+      <div style={{
+        margin: "auto",
+        width: "100%",
+        display: "grid",
+        gridTemplateColumns: "49% 49%",
+        gridTemplateRows: "120px 120px",
+        gap: "2%",
+      }}>{
+
+          allFfDishes.map((dish) =>
+
+            <div className='items' style={{ border: "1px solid #CCC5E4", width: "100%", display: "flex", borderRadius: "5px" }}>
+
+              <div style={{ justifyContent: "space-between" }}>
+                <p style={{ marginLeft: "12px", fontWeight: "bold" }}>{dish.dish_name}</p>
+
+                <p style={{ margin: "12px", marginTop: "-10px", color: "#6B6B83" }}>{dish.description}</p>
+
+              </div>
+
+              <div style={{
+                position: "relative"
+              }}>
+
+                <img className='itemImg' style={{ marginRight: "12px", marginTop: "12px", height: "100px", }} src={dish.image} alt="" />
+                <p className='price'> $ {dish.price}.00+</p>
+              </div>
+
+
+            </div>
+          )}
+      </div>
+    </div>
+  )
+
+}
+
+const BFD = (BfdDishes) => {
+
+  let allBfdDishes = BfdDishes.BfdDishes;
+
+  // console.log(allBfdDishes);
+  return (
+    <div>
+      <br />
+      <h3>Bone fish dinner</h3>
+      <div style={{
+        margin: "auto",
+        width: "100%",
+        display: "grid",
+        gridTemplateColumns: "49% 49%",
+        gridTemplateRows: "120px 120px",
+        gap: "2%",
+      }}>{
+
+          allBfdDishes.map((dish) =>
+
+            <div className='items' style={{ border: "1px solid #CCC5E4", width: "100%", display: "flex", borderRadius: "5px" }}>
+
+              <div style={{ justifyContent: "space-between" }}>
+                <p style={{ marginLeft: "12px", fontWeight: "bold" }}>{dish.dish_name}</p>
+
+                <p style={{ margin: "12px", marginTop: "-10px", color: "#6B6B83" }}>{dish.description}</p>
+
+              </div>
+
+              <div style={{
+                position: "relative"
+              }}>
+
+                <img className='itemImg' style={{ marginRight: "12px", marginTop: "12px", height: "100px", }} src={dish.image} alt="" />
+                <p className='price'> $ {dish.price}.00+</p>
+              </div>
+
+
+            </div>
+          )}
+      </div>
+
+    </div>
+  )
+}
+
+const About = (aboutRest) => {
+
+  //indivitual data of one restaurant
+  let data2 = aboutRest.aboutRest;
+
+  // console.log(data2);
   return (
     <div style={{}}>
-      about
-      <h2>{data[0].restaurant_name}</h2>
-      <p style={{ color: "blue", marginTop: "-10px" }}>{data[0].category}</p>
+      <h2>{data2.restaurant_name}</h2>
+      <p style={{ color: "blue", marginTop: "-10px" }}>{data2.category}</p>
       <p style={{ color: "#d3d3d3", lineHeight: "7px" }}>$$$$$</p>
       <p>
         This restaurant uses their own drivers for delivery. Grubhub charges no
@@ -235,11 +283,12 @@ const About = () => {
       <div style={{ display: "flex", gap: "2%" }}>
         <div style={{ width: "49%" }}>
           <div
-            style={{ height: "70px", border: "1px solid red", width: "100%" }}
+            style={{ height: "70px", border: "1px solid #CCC5E4", width: "100%" }}
           >
-            Map of{" "}
+            {/* map of */}
+            <img style={{ width: "100%", height: "100%" }} src={imageOfMap} alt="Map" />
           </div>
-          <p>{data[0].location}</p>
+          <p>{data2.location}</p>
           <hr />
 
           <div style={{ lineHeight: "4px" }}>
@@ -309,19 +358,72 @@ const Reviews = () => {
 };
 
 export default function MenuAboutReviews() {
-  const [data, setData] = useState([]);
 
-  let linkofApi = "https://grubhub-backend-clone.herokuapp.com/dish";
 
-  const fetchData = () => {
-    return fetch(linkofApi)
+  const [singleData, setSingleData] = useState([]);
+
+  const { name } = useParams();
+
+  useEffect(() => {
+    axios
+      .get(`https://grubhub-backend-clone.herokuapp.com/restaurant/${name}`)
+      .then((res) => setSingleData(...res.data));
+  }, []);
+
+  const [chicken, setChicken] = useState([]);
+  const [smoothies, setSmoothies] = useState([]);
+  const [appetizers, setAppetizers] = useState([]);
+  const [ff, setFf] = useState([]);
+  const [bfd, setBfd] = useState([]);
+
+  let linkofChicken = "https://grubhub-backend-clone.herokuapp.com/dish/Chicken";
+  let linkofSmoothies = "https://grubhub-backend-clone.herokuapp.com/dish/Smoothies";
+  let linkofAppetizers = "https://grubhub-backend-clone.herokuapp.com/dish/Appetizers";
+  let linkofFf = "https://grubhub-backend-clone.herokuapp.com/dish/Fillet%20fish";
+  let linkofBfd = "https://grubhub-backend-clone.herokuapp.com/dish/Bone%20fish%20dinner";
+
+
+  const fetchDataChicken = () => {
+
+    return fetch(linkofChicken)
       .then((response) => response.json())
-      .then((data) => setData(data));
-  };
+      .then((chicken) => setChicken(chicken))
+  }
+
+  const fetchDataSmoothies = () => {
+
+    return fetch(linkofSmoothies)
+      .then((res2) => res2.json())
+      .then((smoothies) => setSmoothies(smoothies))
+  }
+
+  const fetchDataAppetizers = () => {
+
+    return fetch(linkofAppetizers)
+      .then((response) => response.json())
+      .then((appetizers) => setAppetizers(appetizers))
+  }
+
+  const fetchDataFf = () => {
+
+    return fetch(linkofFf)
+      .then((response) => response.json())
+      .then((ff) => setFf(ff))
+  }
+  const fetchDataBfd = () => {
+
+    return fetch(linkofBfd)
+      .then((response) => response.json())
+      .then((bfd) => setBfd(bfd))
+  }
 
   useState(() => {
-    fetchData();
-  }, []);
+    fetchDataChicken();
+    fetchDataSmoothies();
+    fetchDataAppetizers();
+    fetchDataFf();
+    fetchDataBfd();
+  }, [])
 
   return (
     <div
@@ -332,8 +434,18 @@ export default function MenuAboutReviews() {
     >
       <TopBar />
 
-      <Menu allDishes={data} />
-      <About />
+      <Chicken chickenDishes={chicken} />
+
+      <Smoothies smoothiesDishes={smoothies} />
+
+      <Appetizers appetizersDishes={appetizers} />
+
+      <FF FfDishes={ff} />
+
+      <BFD BfdDishes={bfd} />
+
+      <About aboutRest={singleData} />
+
       <Reviews />
     </div>
   );
