@@ -470,8 +470,6 @@ const Reviews = (aboutRest) => {
   );
 };
 
-
-
 export default function MenuAboutReviews() {
 
 
@@ -562,6 +560,7 @@ export default function MenuAboutReviews() {
       <About aboutRest={singleData} />
 
       <Reviews aboutRest={singleData} />
+
     </div>
   );
 }

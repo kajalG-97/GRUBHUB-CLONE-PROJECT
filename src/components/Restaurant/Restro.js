@@ -13,7 +13,7 @@ export default function Restro() {
     axios
       .get(`https://grubhub-backend-clone.herokuapp.com/restaurant/${name}`)
       .then((res) => setSingleData(...res.data));
-  }, );
+  });
 
   return (
     <>
