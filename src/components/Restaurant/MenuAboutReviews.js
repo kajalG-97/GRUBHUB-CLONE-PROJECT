@@ -78,7 +78,7 @@ const Chicken = (chickenDishes) => {
 
               <div>
                 {/* button */}
-                <button onClick={handleCart}>Add to cart</button>
+                <button className="addCart" onClick={handleCart}>Add to cart</button>
               </div>
             </div>
           </div>
@@ -148,7 +148,7 @@ const Smoothies = (smoothiesDishes) => {
 
               <div>
                 {/* button */}
-                <button onClick={handleCart}>Add to cart</button>
+                <button className="addCart" onClick={handleCart}>Add to cart</button>
               </div>
             </div>
           </div>
@@ -219,7 +219,7 @@ const Appetizers = (appetizersDishes) => {
 
               <div>
                 {/* button */}
-                <button onClick={handleCart}>Add to cart</button>
+                <button className="addCart" onClick={handleCart}>Add to cart</button>
               </div>
             </div>
           </div>
@@ -289,7 +289,7 @@ const FF = (FfDishes) => {
               />
               <p className="price"> $ {dish.price}.00+</p><div>
                 {/* button */}
-                <button onClick={handleCart}>Add to cart</button>
+                <button className="addCart" onClick={handleCart}>Add to cart</button>
               </div>
             </div>
           </div>
@@ -357,7 +357,7 @@ const BFD = (BfdDishes) => {
               />
               <p className="price"> $ {dish.price}.00+</p><div>
                 {/* button */}
-                <button onClick={handleCart}>Add to cart</button>
+                <button className="addCart" onClick={handleCart}>Add to cart</button>
               </div>
             </div>
           </div>
