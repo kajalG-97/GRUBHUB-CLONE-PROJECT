@@ -2,6 +2,9 @@ import Paper from "@mui/material/Paper";
 import { useNavigate } from "react-router-dom";
 import { NavSignup } from "./NavSignup";
 import Box from "@mui/material/Box";
+import { useDispatch } from "react-redux";
+import { UserLogin } from "../../redux/actions";
+
 import {
   Alert,
   AlertTitle,
@@ -21,6 +24,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 export const SignIn = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const notify = () =>
     toast.success("Logged in Successfully", {
       position: "top-center",
@@ -39,6 +43,7 @@ export const SignIn = () => {
   };
 
   const loginHandler = () => {
+    
     // validation for email and password
     const emailpattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const passwordPattern =
@@ -59,7 +64,7 @@ export const SignIn = () => {
         .post("https://grubhub-backend-clone.herokuapp.com/login", data)
         .then((res) => {
           if (res) {
-            console.log('res', res);
+            dispatch(UserLogin(res.data.user.firstName));
             localStorage.setItem("userlogin", res.data.user.firstName);
             navigate("/home");
             notify();

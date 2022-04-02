@@ -11,8 +11,13 @@ import Tooltip from "@mui/material/Tooltip";
 import { Link, useNavigate } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+import { useSelector } from "react-redux";
+
 
 export const ResponsiveAppBar = () => {
+const authentication = useSelector((store) => store.login.login);
+
+    console.log('authications', authentication);
 
   const navigate = useNavigate();
 
@@ -88,7 +93,7 @@ export const ResponsiveAppBar = () => {
 
                 sx={{ my: 2, color: "black", display: "block" }}
               >
-                Hi! Kajal
+                Hi! {authentication}
               </Button>
             </Box>
             <ShoppingBagIcon

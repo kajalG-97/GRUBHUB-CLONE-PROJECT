@@ -1,9 +1,10 @@
 import React from "react";
 import "./restaurants.css";
 import { useNavigate } from "react-router-dom";
+import Button from "@mui/material/Button";
 export default function Navbar() {
   const navigate = useNavigate();
-  let location = "Washington DC";
+  let location = "sdfghhhhhjk";
   let userName = "Shubham";
 
   return (
@@ -17,11 +18,18 @@ export default function Navbar() {
         />
 
         {/* position img */}
-        <img
+        {/* <img
           style={{ marginLeft: "35px", height: "25px", marginTop: "25px" }}
           src="https://w7.pngwing.com/pngs/258/544/png-transparent-location-logo-location-duke-university-logo-information-blue-earth-blue-plan-time.png"
           alt=""
-        />
+        /> */}
+        <Button
+          key={"Hi! Kajal"}
+
+          sx={{ my: 2, color: "black", display: "block" }}
+        >
+          location
+        </Button>
 
         {/* location */}
         <p style={{ marginLeft: "8px", marginTop: "25px", color: "blue" }}>
