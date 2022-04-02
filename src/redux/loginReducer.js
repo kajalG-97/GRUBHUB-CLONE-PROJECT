@@ -1,11 +1,12 @@
-import { UserLogin } from "./actions"
+import { LOGIN } from "./actions";
 const initialState = {
-    login:"Kajal"
-}
+  login:localStorage.getItem("userlogin") || "",
+};
 export const loginReducer = (store = initialState, { type, payload }) => {
-    switch (type) {
-        case UserLogin: return {login: payload }
-        default: return store;
-
-    }
-}
+  switch (type) {
+    case LOGIN:
+      return {login: payload };
+    default:
+      return store;
+  }
+};

@@ -14,6 +14,7 @@ import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import { useSelector } from "react-redux";
 
 
+
 export const ResponsiveAppBar = () => {
 const authentication = useSelector((store) => store.login.login);
 
@@ -45,6 +46,7 @@ const authentication = useSelector((store) => store.login.login);
                 src="https://seekvectorlogo.com/wp-content/uploads/2021/12/grubhub-vector-logo-2021.png"
                 alt=""
                 style={{ width: "130px", height: "70px" }}
+                onClick={() => navigate("/home")}
               />
             </Typography>
 

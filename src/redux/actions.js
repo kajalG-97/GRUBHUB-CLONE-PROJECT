@@ -1,5 +1,4 @@
 export const ADD_CART = "ADD_CART";
-
 export const LOGIN = "LOGIN";
 
 export const addToCart = (data) => {
@@ -9,4 +8,4 @@ export const addToCart = (data) => {
   };
 };
 
-export const UserLogin = (payload) => ({ type: LOGIN ,payload:payload});
+export const UserLogin = (payload) => ({ type: LOGIN, payload: payload });

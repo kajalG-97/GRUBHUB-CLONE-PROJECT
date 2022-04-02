@@ -2,38 +2,48 @@ import React from "react";
 import "./restaurants.css";
 import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
+import { useParams } from "react-router";
+import { useDispatch } from "react-redux";
+import { useState, useEffect } from "react";
+
+import { useSelector } from "react-redux";
+import axios from "axios";
+
+import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
+
 export default function Navbar() {
   const navigate = useNavigate();
-  let location = "sdfghhhhhjk";
-  let userName = "Shubham";
+
+  const authentication = useSelector((store) => store.login.login);
+
+  const { name } = useParams();
+  const [val, setVal] = useState("");
+
+  useEffect(() => {
+    axios
+      .get(`https://grubhub-backend-clone.herokuapp.com/restaurant/${name}`)
+      .then((res) => setVal(res.data[0].location));
+  }, []);
+
+  console.log("val", val);
 
   return (
     <div className="navbar">
       <ui style={{ display: "flex" }}>
         {/* logo */}
         <img
-          style={{ marginLeft: "35px", height: "64px" }}
+          onClick={() => navigate("/home")}
+          style={{ marginLeft: "35px", height: "70px" }}
           src="https://seekvectorlogo.com/wp-content/uploads/2021/12/grubhub-vector-logo-2021.png"
           alt=""
         />
 
-        {/* position img */}
-        {/* <img
-          style={{ marginLeft: "35px", height: "25px", marginTop: "25px" }}
-          src="https://w7.pngwing.com/pngs/258/544/png-transparent-location-logo-location-duke-university-logo-information-blue-earth-blue-plan-time.png"
-          alt=""
-        /> */}
-        <Button
-          key={"Hi! Kajal"}
-
-          sx={{ my: 2, color: "black", display: "block" }}
-        >
-          location
-        </Button>
-
-        {/* location */}
+        <img
+          src="https://img.icons8.com/windows/300/place-marker.png"
+          style={{ marginLeft: "35px", marginTop: "13px", height: "40px" }}
+        />
         <p style={{ marginLeft: "8px", marginTop: "25px", color: "blue" }}>
-          {location}
+          {val}
         </p>
 
         {/* searchbox */}
@@ -50,28 +60,21 @@ export default function Navbar() {
           placeholder="    Search Grubhub"
         />
 
-        {/* username */}
-        <p style={{ marginLeft: "400px", height: "45px", marginTop: "20px" }}>
-          Hi, {userName}!
-        </p>
+        <Button
+          key={"Hi! Kajal"}
 
-        {/* downarrow */}
-        <img
-          style={{ marginLeft: "8px", height: "25px", marginTop: "17px" }}
-          src="https://www.cet1886.org/wp-content/themes/Eldo/images/down-arrow.svg"
-          alt=""
-        />
+          sx={{ my: 2, marginLeft: "35%", color: "black", display: "block" }}
+        >
+          Hi! {authentication}
+        </Button>
 
-        {/* bagImg */}
-        <img
+        <ShoppingBagIcon
           onClick={() => navigate("/cart")}
-          style={{ marginLeft: "35px", height: "35px", marginTop: "12px" }}
-          src="https://cdn.iconscout.com/icon/premium/png-256-thumb/office-bag-1970004-1662960.png"
-          alt=""
+          sx={{ color: "black", marginRight: "2px", marginTop: "20px", marginLeft: "15px" }}
         />
       </ui>
 
-      <hr style={{marginTop: "-17.5px",}} />
+      <hr style={{ marginTop: "-17.5px", }} />
     </div>
   );
 }

@@ -43,7 +43,6 @@ export const SignIn = () => {
   };
 
   const loginHandler = () => {
-    
     // validation for email and password
     const emailpattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     const passwordPattern =
@@ -65,7 +64,10 @@ export const SignIn = () => {
         .then((res) => {
           if (res) {
             dispatch(UserLogin(res.data.user.firstName));
-            localStorage.setItem("userlogin", res.data.user.firstName);
+            localStorage.setItem(
+              "userlogin",
+              JSON.stringify(res.data.user.firstName)
+            );
             navigate("/home");
             notify();
           }
@@ -76,9 +78,10 @@ export const SignIn = () => {
     }
   };
 
-   const googleLogin=()=>{
-    window.location.href="https://grubhub-backend-clone.herokuapp.com/auth/google"
-   }
+  const googleLogin = () => {
+    window.location.href =
+      "https://grubhub-backend-clone.herokuapp.com/auth/google";
+  };
   return (
     <>
       <NavSignup />
