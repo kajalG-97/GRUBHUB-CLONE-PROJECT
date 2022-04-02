@@ -2,10 +2,27 @@ import React from "react";
 import "./restaurants.css";
 import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
+import { useParams } from "react-router";
+import { useDispatch } from "react-redux";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 export default function Navbar() {
   const navigate = useNavigate();
-  let location = "sdfghhhhhjk";
+  
   let userName = "Shubham";
+  const { name } = useParams();
+  const [val, setVal] = useState("");
+  
+  useEffect(() => {
+    axios
+    .get(`https://grubhub-backend-clone.herokuapp.com/restaurant/${name}`)
+    .then((res) => setVal(res.data[0].location));
+  }, []);
+  
+  
+  console.log('val', val);
+
 
   return (
     <div className="navbar">
@@ -23,17 +40,18 @@ export default function Navbar() {
           src="https://w7.pngwing.com/pngs/258/544/png-transparent-location-logo-location-duke-university-logo-information-blue-earth-blue-plan-time.png"
           alt=""
         /> */}
-        <Button
+        {/* <Button
           key={"Hi! Kajal"}
 
           sx={{ my: 2, color: "black", display: "block" }}
         >
           location
-        </Button>
+        </Button> */}
 
         {/* location */}
+        <img src="https://img.icons8.com/windows/300/place-marker.png" style={{ marginLeft: "35px",marginTop:"13px", height: "40px" }}/>
         <p style={{ marginLeft: "8px", marginTop: "25px", color: "blue" }}>
-          {location}
+          {val}
         </p>
 
         {/* searchbox */}
