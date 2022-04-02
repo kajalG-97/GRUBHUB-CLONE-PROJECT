@@ -5,12 +5,17 @@ import Button from "@mui/material/Button";
 import { useParams } from "react-router";
 import { useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
+
+import { useSelector } from "react-redux";
 import axios from "axios";
+
+import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 
 export default function Navbar() {
   const navigate = useNavigate();
 
-  let userName = JSON.parse(localStorage.getItem("userlogin")) || "";
+  const authentication = useSelector((store) => store.login.login);
+
   const { name } = useParams();
   const [val, setVal] = useState("");
 
@@ -27,6 +32,7 @@ export default function Navbar() {
       <ui style={{ display: "flex" }}>
         {/* logo */}
         <img
+          onClick={() => navigate("/home")}
           style={{ marginLeft: "35px", height: "70px" }}
           src="https://seekvectorlogo.com/wp-content/uploads/2021/12/grubhub-vector-logo-2021.png"
           alt=""
@@ -54,28 +60,20 @@ export default function Navbar() {
           placeholder="    Search Grubhub"
         />
 
-        {/* username */}
-        <p style={{ marginLeft: "600px", height: "45px", marginTop: "20px" }}>
-          Hi, {userName}!
-        </p>
+        <Button
+          key={"Hi! Kajal"}
 
-        {/* downarrow */}
-        <img
-          style={{ marginLeft: "8px", height: "25px", marginTop: "17px" }}
-          src="https://www.cet1886.org/wp-content/themes/Eldo/images/down-arrow.svg"
-          alt=""
-        />
+          sx={{ my: 2, marginLeft:"35%",color: "black", display: "block" }}
+        >
+          Hi! {authentication}
+        </Button>
 
-        {/* bagImg */}
-        <img
+        <ShoppingBagIcon
           onClick={() => navigate("/cart")}
-          style={{ marginLeft: "25px", height: "35px", marginTop: "12px" }}
-          src="https://cdn.iconscout.com/icon/premium/png-256-thumb/office-bag-1970004-1662960.png"
-          alt=""
+          sx={{ color: "black", marginRight: "2px",marginTop:"20px",marginLeft:"15px" }}
         />
       </ui>
 
-      <hr style={{ marginTop: "-10px" }} />
     </div>
   );
 }
