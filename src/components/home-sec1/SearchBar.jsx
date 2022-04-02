@@ -64,7 +64,7 @@ export default function SearchAppBar() {
 
     const [suggestions, setSuggestions] = React.useState([]);
 
-    const [data, setData] = React.useState(" ");
+    const [data, setData] = React.useState([]);
 
     const debounce = (func) => {
         let timer;
@@ -80,7 +80,7 @@ export default function SearchAppBar() {
 
     const handleChange = (value) => {
         if (!value) {
-            setSuggestions("");
+            setSuggestions([]);
             return;
         }
         fetch(
@@ -92,7 +92,7 @@ export default function SearchAppBar() {
 
     const handleChangeLocation = (value) => {
         if (!value) {
-            setData("");
+            setData([]);
             return;
         }
         fetch(
