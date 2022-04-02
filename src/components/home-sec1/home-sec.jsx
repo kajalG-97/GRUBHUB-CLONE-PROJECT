@@ -9,7 +9,7 @@ export const HomeSection = () => {
       <ResponsiveAppBar />
       <SearchBackgroundDiv />
       <DarkDiv />
-      {/* <Promotions/> */}
+      <Promotions/>
     </>
   );
 };
