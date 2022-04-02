@@ -1,5 +1,6 @@
 import { ResponsiveAppBar } from "../home-sec1/home-nav";
 import { Link } from "react-router-dom";
+import { ChakraProvider } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { Box, Image, Badge } from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
@@ -37,74 +38,76 @@ export const CartPage = () => {
           />
         </div>
       ) : (
-        <div>
-          <div className="parentContainer">
-            {cartData.map((property) => {
-              return (
-                <Box
-                  maxW="sm"
-                  borderWidth="1px"
-                  borderRadius="lg"
-                  overflow="hidden"
-                  width="250px"
-                >
-                  <Image src={property.image} alt="Image" width="100%" />
-                  <Box p="6">
-                    <Box display="flex" alignItems="baseline">
-                      <Badge borderRadius="full" px="2" colorScheme="teal">
-                        Category
-                      </Badge>
+        <ChakraProvider>
+          <div>
+            <div className="parentContainer">
+              {cartData.map((property) => {
+                return (
+                  <Box
+                    maxW="sm"
+                    borderWidth="1px"
+                    borderRadius="lg"
+                    overflow="hidden"
+                    width="250px"
+                  >
+                    <Image src={property.image} alt="Image" width="100%" />
+                    <Box p="6">
+                      <Box display="flex" alignItems="baseline">
+                        <Badge borderRadius="full" px="2" colorScheme="teal">
+                          Category
+                        </Badge>
+                        <Box
+                          color="gray.500"
+                          fontWeight="semibold"
+                          letterSpacing="wide"
+                          fontSize="xs"
+                          textTransform="uppercase"
+                          ml="2"
+                        >
+                          {property.category}
+                        </Box>
+                      </Box>
+
                       <Box
-                        color="gray.500"
+                        mt="1"
                         fontWeight="semibold"
-                        letterSpacing="wide"
-                        fontSize="xs"
-                        textTransform="uppercase"
-                        ml="2"
+                        as="h4"
+                        lineHeight="tight"
+                        isTruncated
                       >
-                        {property.category}
+                        {property.dish_name}
                       </Box>
-                    </Box>
 
-                    <Box
-                      mt="1"
-                      fontWeight="semibold"
-                      as="h4"
-                      lineHeight="tight"
-                      isTruncated
-                    >
-                      {property.dish_name}
-                    </Box>
-
-                    <Box>
-                      {property.price}
-                      <Box as="span" color="gray.600" fontSize="sm">
-                        $
+                      <Box>
+                        {property.price}
+                        <Box as="span" color="gray.600" fontSize="sm">
+                          $
+                        </Box>
                       </Box>
-                    </Box>
 
-                    <Box display="flex" mt="2" alignItems="center">
-                      {Array(5)
-                        .fill("")
-                        .map((_, i) => (
-                          <StarIcon
-                            key={i}
-                            color={i < 3 ? "teal.500" : "gray.300"}
-                          />
-                        ))}
-                      <Box as="span" ml="2" color="gray.600" fontSize="sm">
-                        {Math.floor(Math.random() * 100) + 1} reviews
+                      <Box display="flex" mt="2" alignItems="center">
+                        {Array(5)
+                          .fill("")
+                          .map((_, i) => (
+                            <StarIcon
+                              key={i}
+                              color={i < 3 ? "teal.500" : "gray.300"}
+                            />
+                          ))}
+                        <Box as="span" ml="2" color="gray.600" fontSize="sm">
+                          {Math.floor(Math.random() * 100) + 1} reviews
+                        </Box>
                       </Box>
                     </Box>
                   </Box>
-                </Box>
-              );
-            })}
+                );
+              })}
+            </div>
+            <div className="btn-class">
+              <button className="cart-btn">Proceed To Pay</button>
+            </div>
           </div>
-          <div className="btn-class">
-            <button className="cart-btn">Proceed To Pay</button>
-          </div>
-        </div>
+        </ChakraProvider>
       )}
     </div>
   );
