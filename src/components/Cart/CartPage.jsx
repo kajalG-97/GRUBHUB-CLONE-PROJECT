@@ -22,9 +22,11 @@ export const CartPage = () => {
     }
   };
   const handleCart = () => {
-    // here we need to navigate user to payment page if he is logged in other wise navigate him to login page
-    // navigate("/payment");
-    console.log("navigate");
+    if (JSON.parse(localStorage.getItem("userlogin"))) {
+      navigate("/payment");
+    } else {
+      navigate("/login");
+    }
   };
   return (
     <div>
