@@ -4,40 +4,18 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
-import MenuItem from "@mui/material/MenuItem";
 import { Link, useNavigate } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 
-const pages = ["Location", "Products", "Cart"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
-
 export const ResponsiveAppBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+
   const navigate = useNavigate();
 
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-  const navigator = () => {};
   const darkTheme = createTheme({
     palette: {
       mode: "light",
@@ -77,14 +55,6 @@ export const ResponsiveAppBar = () => {
                   </IconButton>
                 </Tooltip>
               </Box>
-
-              {/* <Button
-                                key={"Products"}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'black', display: 'block' }}
-                            >
-                                Product
-                            </Button> */}
             </Box>
 
             <Typography
@@ -108,25 +78,26 @@ export const ResponsiveAppBar = () => {
             >
               <Button
                 key={"Catering"}
-                onClick={handleCloseNavMenu}
+
                 sx={{ my: 2, color: "black", display: "block" }}
               >
                 Catering
               </Button>
               <Button
                 key={"Hi! Kajal"}
-                onClick={handleCloseNavMenu}
+
                 sx={{ my: 2, color: "black", display: "block" }}
               >
                 Hi! Kajal
               </Button>
             </Box>
-
-            <ShoppingBagIcon sx={{ color: "black", marginRight: "2px" }} />
+            <ShoppingBagIcon
+              onClick={() => navigate("/cart")}
+              sx={{ color: "black", marginRight: "2px" }}
+            />
           </Toolbar>
         </Container>
       </AppBar>
     </ThemeProvider>
   );
 };
-// import { ThemeProvider, createTheme } from "@mui/material/styles";

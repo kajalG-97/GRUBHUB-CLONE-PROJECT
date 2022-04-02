@@ -1,10 +1,9 @@
 import * as React from "react";
 import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
-import { useState } from "react";
 
 function stringToColor() {
-  const [val, setVal] = useState("kajal");
+  const val = "kajal";
   let hash = 0;
   let i;
   /* eslint-disable no-bitwise */

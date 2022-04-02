@@ -1,13 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/actions";
 import imageOfMap from "./location.png";
-
-// cart function
-const handleCart = () => {
-  console.log("cart");
-};
 
 const TopBar = () => {
   return (
@@ -20,8 +16,16 @@ const TopBar = () => {
     </div>
   );
 };
+const LocalArray = JSON.parse(localStorage.getItem("cartData")) || [];
 
 const Chicken = (chickenDishes) => {
+  const dispatch = useDispatch();
+  // cart function
+  const handleCart = (dish) => {
+    LocalArray.push(dish);
+    localStorage.setItem("cartData", JSON.stringify(LocalArray));
+    dispatch(addToCart(dish));
+  };
   let allChickenDishes = chickenDishes.chickenDishes;
 
   return (
@@ -78,7 +82,9 @@ const Chicken = (chickenDishes) => {
 
               <div>
                 {/* button */}
-                <button className="addCart" onClick={handleCart}>Add to cart</button>
+                <button className="addCart" onClick={() => handleCart(dish)}>
+                  Add to cart
+                </button>
               </div>
             </div>
           </div>
@@ -89,6 +95,13 @@ const Chicken = (chickenDishes) => {
 };
 
 const Smoothies = (smoothiesDishes) => {
+  const dispatch = useDispatch();
+  // cart function
+  const handleCart = (dish) => {
+    LocalArray.push(dish);
+    localStorage.setItem("cartData", JSON.stringify(LocalArray));
+    dispatch(addToCart(dish));
+  };
   let allSmoothiesDishes = smoothiesDishes.smoothiesDishes;
 
   // console.log(allSmoothiesDishes);
@@ -126,7 +139,6 @@ const Smoothies = (smoothiesDishes) => {
               >
                 {dish.description}
               </p>
-
             </div>
 
             <div
@@ -148,7 +160,9 @@ const Smoothies = (smoothiesDishes) => {
 
               <div>
                 {/* button */}
-                <button className="addCart" onClick={handleCart}>Add to cart</button>
+                <button className="addCart" onClick={() => handleCart(dish)}>
+                  Add to cart
+                </button>
               </div>
             </div>
           </div>
@@ -159,6 +173,13 @@ const Smoothies = (smoothiesDishes) => {
 };
 
 const Appetizers = (appetizersDishes) => {
+  const dispatch = useDispatch();
+  // cart function
+  const handleCart = (dish) => {
+    LocalArray.push(dish);
+    localStorage.setItem("cartData", JSON.stringify(LocalArray));
+    dispatch(addToCart(dish));
+  };
   let allAppetizersDishes = appetizersDishes.appetizersDishes;
 
   // console.log(allAppetizersDishes);
@@ -196,7 +217,6 @@ const Appetizers = (appetizersDishes) => {
               >
                 {dish.description}
               </p>
-
             </div>
 
             <div
@@ -219,7 +239,9 @@ const Appetizers = (appetizersDishes) => {
 
               <div>
                 {/* button */}
-                <button className="addCart" onClick={handleCart}>Add to cart</button>
+                <button className="addCart" onClick={() => handleCart(dish)}>
+                  Add to cart
+                </button>
               </div>
             </div>
           </div>
@@ -230,6 +252,13 @@ const Appetizers = (appetizersDishes) => {
 };
 
 const FF = (FfDishes) => {
+  const dispatch = useDispatch();
+  // cart function
+  const handleCart = (dish) => {
+    LocalArray.push(dish);
+    localStorage.setItem("cartData", JSON.stringify(LocalArray));
+    dispatch(addToCart(dish));
+  };
   let allFfDishes = FfDishes.FfDishes;
 
   // console.log(allFfDishes);
@@ -268,8 +297,6 @@ const FF = (FfDishes) => {
               >
                 {dish.description}
               </p>
-
-
             </div>
 
             <div
@@ -287,9 +314,12 @@ const FF = (FfDishes) => {
                 src={dish.image}
                 alt=""
               />
-              <p className="price"> $ {dish.price}.00+</p><div>
+              <p className="price"> $ {dish.price}.00+</p>
+              <div>
                 {/* button */}
-                <button className="addCart" onClick={handleCart}>Add to cart</button>
+                <button className="addCart" onClick={() => handleCart(dish)}>
+                  Add to cart
+                </button>
               </div>
             </div>
           </div>
@@ -300,6 +330,13 @@ const FF = (FfDishes) => {
 };
 
 const BFD = (BfdDishes) => {
+  const dispatch = useDispatch();
+  // cart function
+  const handleCart = (dish) => {
+    LocalArray.push(dish);
+    localStorage.setItem("cartData", JSON.stringify(LocalArray));
+    dispatch(addToCart(dish));
+  };
   let allBfdDishes = BfdDishes.BfdDishes;
 
   // console.log(allBfdDishes);
@@ -337,7 +374,6 @@ const BFD = (BfdDishes) => {
               >
                 {dish.description}
               </p>
-
             </div>
 
             <div
@@ -355,9 +391,12 @@ const BFD = (BfdDishes) => {
                 src={dish.image}
                 alt=""
               />
-              <p className="price"> $ {dish.price}.00+</p><div>
+              <p className="price"> $ {dish.price}.00+</p>
+              <div>
                 {/* button */}
-                <button className="addCart" onClick={handleCart}>Add to cart</button>
+                <button className="addCart" onClick={() => handleCart(dish)}>
+                  Add to cart
+                </button>
               </div>
             </div>
           </div>
