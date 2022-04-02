@@ -173,6 +173,9 @@ export const SignUp = () => {
             variant="contained"
             sx={{ backgroundColor: "#4285f4", color: "white " }}
             startIcon={<GoogleIcon />}
+            onClick={()=>{
+              window.location.href="https://grubhub-backend-clone.herokuapp.com/auth/google"
+            }}
           >
             Continue With Google
           </Button>

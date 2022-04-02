@@ -69,6 +69,9 @@ export const SignIn = () => {
     }
   };
 
+   const googleLogin=()=>{
+    window.location.href="https://grubhub-backend-clone.herokuapp.com/auth/google"
+   }
   return (
     <>
       <NavSignup />
@@ -160,6 +163,7 @@ export const SignIn = () => {
             variant="contained"
             sx={{ backgroundColor: "#4285f4", color: "white " }}
             startIcon={<GoogleIcon />}
+            onClick={googleLogin}
           >
             Continue With Google
           </Button>
