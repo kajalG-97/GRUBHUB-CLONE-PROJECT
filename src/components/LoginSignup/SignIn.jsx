@@ -59,6 +59,8 @@ export const SignIn = () => {
         .post("https://grubhub-backend-clone.herokuapp.com/login", data)
         .then((res) => {
           if (res) {
+            console.log('res', res);
+            localStorage.setItem("userlogin", res.data.user.firstName);
             navigate("/home");
             notify();
           }
