@@ -29,6 +29,7 @@ border-radius: 20px;
 /* align-items: center; */
 margin: auto;
 margin-top:20px;
+padding-top:1px;
 background-color: #343333;
  font-size:100%;
 
