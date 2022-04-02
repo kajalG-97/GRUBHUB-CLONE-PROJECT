@@ -1,5 +1,6 @@
 import { ResponsiveAppBar } from "../home-sec1/home-nav";
 import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { ChakraProvider } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { Box, Image, Badge } from "@chakra-ui/react";
@@ -12,6 +13,7 @@ export const CartPage = () => {
   useEffect(() => {
     getData();
   }, []);
+  const data = useSelector((store) => console.log(store.cart));
   const getData = () => {
     const array = JSON.parse(localStorage.getItem("cartData"));
     if (array) {
