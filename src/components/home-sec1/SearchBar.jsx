@@ -62,7 +62,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function SearchAppBar() {
 
-    const [suggestions, setSuggestions] = React.useState("");
+    const [suggestions, setSuggestions] = React.useState([]);
 
     const [data, setData] = React.useState(" ");
 
