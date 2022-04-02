@@ -14,7 +14,6 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link, useNavigate } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
-
 const pages = ["Location", "Products", "Cart"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -121,8 +120,10 @@ export const ResponsiveAppBar = () => {
                 Hi! Kajal
               </Button>
             </Box>
-
-            <ShoppingBagIcon sx={{ color: "black", marginRight: "2px" }} />
+            <ShoppingBagIcon
+              onClick={() => navigate("/cart")}
+              sx={{ color: "black", marginRight: "2px" }}
+            />
           </Toolbar>
         </Container>
       </AppBar>

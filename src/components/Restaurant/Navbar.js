@@ -1,7 +1,8 @@
 import React from "react";
 import "./restaurants.css";
-
+import { useNavigate } from "react-router-dom";
 export default function Navbar() {
+  const navigate = useNavigate();
   let location = "Washington DC";
   let userName = "Shubham";
 
@@ -55,6 +56,7 @@ export default function Navbar() {
 
         {/* bagImg */}
         <img
+          onClick={() => navigate("/cart")}
           style={{ marginLeft: "35px", height: "35px", marginTop: "12px" }}
           src="https://cdn.iconscout.com/icon/premium/png-256-thumb/office-bag-1970004-1662960.png"
           alt=""
