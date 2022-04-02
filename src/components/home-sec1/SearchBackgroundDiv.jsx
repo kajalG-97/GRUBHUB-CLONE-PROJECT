@@ -1,4 +1,4 @@
-import { BImg, H1 } from "./style";
+import { BImg, H1, NAME } from "./style";
 import { useState } from "react";
 import * as React from 'react';
 import Stack from '@mui/material/Stack';
@@ -9,21 +9,22 @@ import Box from '@mui/material/Box';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 
-export default function DisabledTabs() {
-  const [value, setValue] = React.useState(2);
+// export default function DisabledTabs() {
+//   const [value, setValue] = React.useState(2);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
+//   const handleChange = (event, newValue) => {
+//     setValue(newValue);
+//   };
 
-  return (
-    <Tabs value={value} onChange={handleChange} aria-label="disabled tabs example">
-      <Tab label="Active" />
+  
+//   return (
+//     <Tabs value={value} onChange={handleChange} aria-label="disabled tabs example">
+//       <Tab label="Active" />
      
-      <Tab label="Active" />
-    </Tabs>
-  );
-}
+//       <Tab label="Active" />
+//     </Tabs>
+//   );
+// }
 
 
 
@@ -33,13 +34,13 @@ export const SearchBackgroundDiv = () => {
 
 
   return (
-    <Box sx={{ flexGrow: 1, display: { xs: "none", md: "block" }}}>
+    <Box sx={{ flexGrow: 1}}>
       
         <BImg className="SearchBackground">
             <H1>{htag}</H1>
             {/* <H1>Who delivers in your neighborhood?</H1> */}
         {/* <Button variant="text">Text</Button> */}
-        <DisabledTabs/>
+        {/* <DisabledTabs/> */}
             <Button  onClick={() => setHtag("Who delivers in your neighborhood?")}>Delivery</Button>
             <button onClick={() => setHtag("Who offers pickup near you?")}>Pickup</button>
             <SearchAppBar/>
@@ -47,4 +48,3 @@ export const SearchBackgroundDiv = () => {
       </Box>
     );
 }
-

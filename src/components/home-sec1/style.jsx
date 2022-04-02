@@ -17,5 +17,24 @@ padding-left:30%;
 padding-top: 4%;
  font-weight: 700;
 
+
+
 `
+
+export const NAME = styled.div`
+color:white;
+text-align:center;
+height :50px;
+width:88%;
+border-radius: 20px;
+/* display: flex; */
+/* align-items: center; */
+margin: auto;
+margin-top:20px;
+background-color: #343333;
+ font-size:100%;
+
+`
+
+
 
