@@ -73,7 +73,7 @@ export default function SearchAppBar() {
 
     const handleChange = (value) => {
         if (!value) {
-            setSuggestions("");
+            setSuggestions([]);
             return;
         }
         fetch(
@@ -85,7 +85,7 @@ export default function SearchAppBar() {
 
     const handleChangeLocation = (value) => {
         if (!value) {
-            setData("");
+            setData([]);
             return;
         }
         fetch(
