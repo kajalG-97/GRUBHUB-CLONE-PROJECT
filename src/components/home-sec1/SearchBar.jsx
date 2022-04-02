@@ -157,7 +157,8 @@ export default function SearchAppBar() {
                         )}
                     </Box>
                 </Box>
-                <Button variant="contained">Search Nearby</Button>
+                {/* <Button variant="contained">Search Nearby</Button> */}
+                <button id="searchButton"onClick={() => { }}>Search Nearby</button>
 
             </Box>
 
@@ -218,8 +219,9 @@ export default function SearchAppBar() {
                     </Box>
                 </Box>
 
-                <Button variant="contained">Search Nearby</Button>
+                {/* <Button variant="contained">Search Nearby</Button> */}
 
+                <button id="searchButton" onClick={() => { }}>Search Nearby</button>
             </Box>
         </Box>
     );

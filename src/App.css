@@ -84,6 +84,17 @@
   font-weight: bold;
   border: none;
 }
+#searchButton{
+  height: 40px;
+  width: 180px;
+  margin-left: 20px;
+  background-color: #0070eb;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius:10px;
+  font-size:18px;
+}
 .ch-btn-link {
   margin-right: 20px;
   text-decoration: none;
