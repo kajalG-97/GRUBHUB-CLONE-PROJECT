@@ -1,3 +1,4 @@
+
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
@@ -13,6 +14,7 @@ import Button from '@mui/material/Button';
 import AddLocationIcon from '@mui/icons-material/AddLocation';
 import { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
+import { P,D } from "./style";
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -28,36 +30,38 @@ const Search = styled('div')(({ theme }) => ({
         marginLeft: theme.spacing(1),
         width: 230,
     },
+
 }));
 
-const SearchIconWrapper = styled('div')(({ theme }) => ({
+const SearchIconWrapper = styled("div")(({ theme }) => ({
     padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
+    height: "100%",
+    position: "absolute",
+    pointerEvents: "none",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: 'inherit',
-    '& .MuiInputBase-input': {
+    color: "inherit",
+    "& .MuiInputBase-input": {
         padding: theme.spacing(1, 1, 1, 0),
         // vertical padding + font size from searchIcon
         paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-        transition: theme.transitions.create('width'),
-        width: '100%',
-        [theme.breakpoints.up('sm')]: {
-            width: '12ch',
-            '&:focus': {
-                width: '20ch',
+        transition: theme.transitions.create("width"),
+        width: "100%",
+        [theme.breakpoints.up("sm")]: {
+            width: "12ch",
+            "&:focus": {
+                width: "20ch",
             },
         },
     },
 }));
 
 export default function SearchAppBar() {
+
     const [suggestions, setSuggestions] = React.useState("");
 
     const debounce = (func) => {
@@ -106,15 +110,15 @@ export default function SearchAppBar() {
                     <Box>
 
                         {suggestions.length > 0 && (
-                            <div className="autocomplete">
+                            <D className="autocomplete">
                                 {suggestions.map((el, i) => (
                                     <div key={i} className="autocompleteItems">
                                         <Link to={`/restaurant/${el.restaurant_name}`}>
-                                            {el.restaurant_name}
+                                           <P>{el.restaurant_name}</P> 
                                         </Link>
                                     </div>
                                 ))}
-                            </div>
+                            </D>
                         )}
                     </Box>
                 </Box>

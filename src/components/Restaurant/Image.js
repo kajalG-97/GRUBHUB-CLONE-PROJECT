@@ -10,7 +10,7 @@ export default function Image({ url }) {
   const [singleData, setSingleData] = useState([]);
 
   const { name } = useParams();
-  
+
   useEffect(() => {
     axios
       .get(`https://grubhub-backend-clone.herokuapp.com/restaurant/${name}`)
