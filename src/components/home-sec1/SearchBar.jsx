@@ -64,6 +64,8 @@ export default function SearchAppBar() {
 
     const [suggestions, setSuggestions] = React.useState("");
 
+    const [data, setData] = React.useState(" ");
+
     const debounce = (func) => {
         let timer;
         return function (...args) {
@@ -88,8 +90,21 @@ export default function SearchAppBar() {
             .then((json) => setSuggestions(json));
     };
 
+    const handleChangeLocation = (value) => {
+        if (!value) {
+            setData("");
+            return;
+        }
+        fetch(
+            `https://grubhub-backend-clone.herokuapp.com/location/search?search=${value}`
+        )
+            .then((res) => res.json())
+            .then((json) => setData(json));
+    };
 
     const optimizedFn = useCallback(debounce(handleChange), []);
+
+    const optimize_function = useCallback(debounce(handleChangeLocation), []);
 
     return (
 
@@ -104,14 +119,14 @@ export default function SearchAppBar() {
                         <StyledInputBase
                             placeholder="Search…"
                             inputProps={{ 'aria-label': 'search' }}
-                            onChange={(e) => optimizedFn(e.target.value)}
+                            onChange={(e) => optimize_function(e.target.value)}
                         />
                     </Search>
                     <Box>
 
-                        {suggestions.length > 0 && (
+                        {data.length > 0 && (
                             <D className="autocomplete">
-                                {suggestions.map((el, i) => (
+                                {data.map((el, i) => (
                                     <div key={i} className="autocompleteItems">
                                         <Link to={`/restaurant/${el.restaurant_name}`}>
                                            <P>{el.restaurant_name}</P> 
@@ -137,15 +152,15 @@ export default function SearchAppBar() {
                     <Box>
 
                         {suggestions.length > 0 && (
-                            <div className="autocomplete">
+                            <D className="autocomplete">
                                 {suggestions.map((el, i) => (
                                     <div key={i} className="autocompleteItems">
                                         <Link to={`/restaurant/${el.restaurant_name}`}>
-                                            {el.restaurant_name}
+                                           <P>{el.restaurant_name}</P> 
                                         </Link>
                                     </div>
                                 ))}
-                            </div>
+                            </D>
                         )}
                     </Box>
                 </Box>

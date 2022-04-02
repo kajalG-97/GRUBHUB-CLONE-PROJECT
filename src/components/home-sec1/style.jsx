@@ -54,7 +54,7 @@ justify-content:space-between;
 `
 export const P = styled.p`
 color:black;
-text-decoration:null;
+text-decoration:none;
 `
 export const D = styled.div`
 background-color:white;
