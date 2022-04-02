@@ -1,11 +1,12 @@
 import { ResponsiveAppBar } from "../home-sec1/home-nav";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import { Box, Image, Badge } from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
 import "./Cart.css";
 export const CartPage = () => {
+  const navigate = useNavigate();
   const [show, setShow] = useState(true);
   const [cartData, setCartData] = useState([]);
   useEffect(() => {
@@ -18,7 +19,10 @@ export const CartPage = () => {
       setCartData(array);
     }
   };
-
+  const handleCart = () => {
+    // here we need to navigate user to payment page if he is logged in other wise navigate him to login page
+    // navigate("/payment");
+  };
   return (
     <div>
       <ResponsiveAppBar />
@@ -108,7 +112,9 @@ export const CartPage = () => {
               })}
             </div>
             <div className="btn-class">
-              <button className="cart-btn">Proceed To Pay</button>
+              <button onClick={handleCart} className="cart-btn">
+                Proceed To Pay
+              </button>
             </div>
           </div>
         </ChakraProvider>
