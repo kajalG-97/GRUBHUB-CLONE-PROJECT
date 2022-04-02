@@ -69,7 +69,7 @@ const Chicken = (chickenDishes) => {
                 style={{
                   marginRight: "12px",
                   marginTop: "12px",
-                  height: "80px",
+                  height: "75px",
                 }}
                 src={dish.image}
                 alt=""
@@ -139,7 +139,7 @@ const Smoothies = (smoothiesDishes) => {
                 style={{
                   marginRight: "12px",
                   marginTop: "12px",
-                  height: "80px",
+                  height: "75px",
                 }}
                 src={dish.image}
                 alt=""
@@ -210,7 +210,7 @@ const Appetizers = (appetizersDishes) => {
                 style={{
                   marginRight: "12px",
                   marginTop: "12px",
-                  height: "80px",
+                  height: "75px",
                 }}
                 src={dish.image}
                 alt=""
@@ -282,7 +282,7 @@ const FF = (FfDishes) => {
                 style={{
                   marginRight: "12px",
                   marginTop: "12px",
-                  height: "80px",
+                  height: "75px",
                 }}
                 src={dish.image}
                 alt=""
@@ -350,7 +350,7 @@ const BFD = (BfdDishes) => {
                 style={{
                   marginRight: "12px",
                   marginTop: "12px",
-                  height: "80px",
+                  height: "75px",
                 }}
                 src={dish.image}
                 alt=""

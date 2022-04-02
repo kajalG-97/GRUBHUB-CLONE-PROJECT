@@ -129,7 +129,7 @@
 
 .price {
   position: absolute;
-  font-size: 13px;
+  font-size: 11px;
   top: 5px;
   right: 25px;
   background-color: white;
@@ -153,4 +153,10 @@
   font-weight: 500;
 }
 
-.addCart {}
+.addCart {
+  background-color: #1565C0;
+  padding: 5px;
+  border: none;
+  color: white;
+  border-radius: 3px;
+}
