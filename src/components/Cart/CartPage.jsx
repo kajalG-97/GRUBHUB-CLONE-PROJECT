@@ -91,7 +91,11 @@ export const CartPage = () => {
                           .map((_, i) => (
                             <StarIcon
                               key={i}
-                              color={i < 3 ? "teal.500" : "gray.300"}
+                              color={
+                                i < Math.floor(Math.random() * 3) + 1
+                                  ? "teal.500"
+                                  : "gray.300"
+                              }
                             />
                           ))}
                         <Box as="span" ml="2" color="gray.600" fontSize="sm">

@@ -95,21 +95,20 @@
   width: 100%;
 }
 .autocomplete {
-  max-height: 150px;
+  max-height: 300px;
+  overflow: scroll;
 }
-.restaurant_data{
+.restaurant_data {
   display: grid;
   grid-template-columns: 22% 22% 22% 22%;
-  grid-gap : 2%;
+  grid-gap: 2%;
   margin-left: 5%;
-  
-  
 }
-.restaurant_data1{
+.restaurant_data1 {
   margin-bottom: 15%;
 }
-.restaurant_data .resto{
-  font-family: 'Ubuntu', sans-serif;
+.restaurant_data .resto {
+  font-family: "Ubuntu", sans-serif;
   position: relative;
   border-radius: 4px;
   background: #fff;
@@ -117,33 +116,32 @@
   width: 100%;
   height: 100%;
   cursor: pointer;
- 
+
   box-shadow: 0.5px 0.5px 0.5px 1px #bcbcce;
-
 }
-.restaurant_data .resto:hover{
-  cursor:pointer;
+.restaurant_data .resto:hover {
+  cursor: pointer;
   border: 0.2px solid #6d7a94;
-
-
 }
-.restaurant_data .resto .charges, .location, .rating, .flag, .category, .distance{
-  
+.restaurant_data .resto .charges,
+.location,
+.rating,
+.flag,
+.category,
+.distance {
   font-family: "ubuntu";
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 1.45
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.45;
 }
 .restaurant_data img {
   width: 100%;
   height: 150px;
 }
-.restaurant_data .title{
-  
+.restaurant_data .title {
   margin-left: 5%;
 }
-.restaurant_data .charges{
-  
+.restaurant_data .charges {
   margin-left: 5%;
 }
 .gh img {
@@ -153,31 +151,20 @@
   padding: 0;
 }
 .resto .category {
-  
-
- margin-left: 5%;
- 
+  margin-left: 5%;
 }
-
 .resto .location {
   margin-left: 5%;
- margin-top: -50px;
-  
-
-
- 
-  
+  margin-top: -50px;
 }
 .resto .distance {
   margin-left: 5%;
-  
 }
 .resto .rating {
   margin-left: 50%;
   margin-bottom: 50px;
-  
 }
-.heading{
+.heading {
   margin-left: 5%;
 }
 .flag img {
@@ -186,43 +173,37 @@
   vertical-align: -70px;
   margin-left: 5%;
   padding-top: -500px;
-  
 }
-.distance{
+.distance {
   vertical-align: 0;
 }
 .star {
-color: #F9A825;
-font-size: 16px;
+  color: #f9a825;
+  font-size: 16px;
 }
 
-.more{
-  
- margin-left: 40%;
- background-color: blue;
- color:whitesmoke;
- padding: 10px 50px;
- border: none;
- bottom: 25%;
- font-size: 18px;
- margin-bottom: 10%;
+.more {
+  margin-left: 40%;
+  background-color: blue;
+  color: whitesmoke;
+  padding: 10px 50px;
+  border: none;
+  bottom: 25%;
+  font-size: 18px;
+  margin-bottom: 10%;
 }
 
-.cards img{
+.cards img {
   width: 500px;
   margin-left: 50%;
 }
-.flex{
+.flex {
   display: flex;
- 
-  
- 
 }
 .left-side {
   margin-left: 5%;
-  
 }
-.left-side button{
+.left-side button {
   margin-left: 10%;
   padding: 10px 20px;
   border-radius: 25px;
@@ -230,11 +211,11 @@ font-size: 16px;
   color: whitesmoke;
   cursor: pointer;
 }
-.grid{
+.grid {
   display: grid;
   grid-template-columns: 20% 20% 20% 20%;
   margin-left: 5%;
-  grid-gap: 1%
+  grid-gap: 1%;
 }
 li {
   list-style: none;
@@ -242,70 +223,73 @@ li {
   text-decoration: underline;
   margin-left: -5%;
 }
-.footer{
-  background-color: #651FFF;
+.footer {
+  background-color: #651fff;
   padding: 20px;
   margin-top: 50px;
 }
-.grid h3{
+.grid h3 {
   color: whitesmoke;
   margin-left: 10%;
 }
 .end {
   display: flex;
 }
-.line{
+.line {
   border: 1px solid whitesmoke;
 }
-.box li{
+.box li {
   width: 200px;
   border: 1px solid whitesmoke;
   padding: 10px 30px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
-.petent{
+.petent {
   color: whitesmoke;
 }
 
-li:hover{
-  color:#282c34;
+li:hover {
+  color: #282c34;
   cursor: pointer;
 }
-.ended{
- margin-left: 30%;
- 
+.ended {
+  margin-left: 30%;
 }
-.yet{
+.yet {
   margin-left: 10%;
 }
 
 .merg {
   margin-bottom: 25px;
 }
-.btn{
+.btn {
   margin-top: 100px;
 }
-.btn button{
+.btn button {
   margin-top: 10%;
   margin-left: 40%;
   background-color: blue;
-  color:whitesmoke;
+  color: whitesmoke;
   padding: 10px 50px;
   border: none;
   font-size: 18px;
   margin-bottom: 100px;
 }
-.ancr{
+.ancr {
   text-decoration: none;
   color: #6d7a94;
 }
-.ancr h3{
+.ancr h3 {
   color: black;
 }
-.ancr h2{
+.ancr h2 {
   color: black;
 }
-.margin{
+.margin {
   margin: 50px auto;
+}
+.ch-link {
+  text-decoration: none;
+  font-size: 25px;
 }
