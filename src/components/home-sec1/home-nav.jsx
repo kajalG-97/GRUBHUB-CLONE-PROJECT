@@ -76,14 +76,6 @@ export const ResponsiveAppBar = () => {
                   </IconButton>
                 </Tooltip>
               </Box>
-
-              {/* <Button
-                                key={"Products"}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'black', display: 'block' }}
-                            >
-                                Product
-                            </Button> */}
             </Box>
 
             <Typography
