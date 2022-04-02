@@ -41,6 +41,7 @@ export default function Navbar() {
         <img
           src="https://img.icons8.com/windows/300/place-marker.png"
           style={{ marginLeft: "35px", marginTop: "13px", height: "40px" }}
+          alt=""
         />
         <p style={{ marginLeft: "8px", marginTop: "25px", color: "blue" }}>
           {val}
@@ -73,6 +74,7 @@ export default function Navbar() {
           sx={{ color: "black", marginRight: "2px", marginTop: "20px", marginLeft: "15px" }}
         />
       </ui>
+
     </div>
   );
 }
