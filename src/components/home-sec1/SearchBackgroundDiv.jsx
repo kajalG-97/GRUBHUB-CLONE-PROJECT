@@ -1,15 +1,8 @@
 import { BImg, H1,DIV,H3, NAME } from "./style";
 import { useState } from "react";
 import * as React from "react";
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
 import SearchAppBar from "./SearchBar";
 import Box from "@mui/material/Box";
-
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-
-
 
 export const SearchBackgroundDiv = () => {
   const [htag, setHtag] = useState("Who delivers in your neighborhood?");

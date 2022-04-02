@@ -1,17 +1,10 @@
 
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import AddLocationIcon from '@mui/icons-material/AddLocation';
 import { useCallback, useState } from "react";
 import { Link } from "react-router-dom";
 import { P,D } from "./style";
@@ -152,15 +145,15 @@ export default function SearchAppBar() {
                     <Box>
 
                         {suggestions.length > 0 && (
-                            <D className="autocomplete">
+                            <div className="autocomplete">
                                 {suggestions.map((el, i) => (
-                                    <div key={i} className="autocompleteItems">
+                                    <D key={i} className="autocompleteItems">
                                         <Link to={`/restaurant/${el.restaurant_name}`}>
                                            <P>{el.restaurant_name}</P> 
                                         </Link>
-                                    </div>
+                                    </D>
                                 ))}
-                            </D>
+                            </div>
                         )}
                     </Box>
                 </Box>
