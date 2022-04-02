@@ -16,11 +16,13 @@ const TopBar = () => {
     </div>
   );
 };
-
+const LocalArray = JSON.parse(localStorage.getItem("cartData")) || [];
 const Chicken = (chickenDishes) => {
   const dispatch = useDispatch();
   // cart function
   const handleCart = (dish) => {
+    LocalArray.push(dish);
+    localStorage.setItem("cartData", JSON.stringify(LocalArray));
     dispatch(addToCart(dish));
   };
   let allChickenDishes = chickenDishes.chickenDishes;
@@ -95,6 +97,8 @@ const Smoothies = (smoothiesDishes) => {
   const dispatch = useDispatch();
   // cart function
   const handleCart = (dish) => {
+    LocalArray.push(dish);
+    localStorage.setItem("cartData", JSON.stringify(LocalArray));
     dispatch(addToCart(dish));
   };
   let allSmoothiesDishes = smoothiesDishes.smoothiesDishes;
@@ -171,6 +175,8 @@ const Appetizers = (appetizersDishes) => {
   const dispatch = useDispatch();
   // cart function
   const handleCart = (dish) => {
+    LocalArray.push(dish);
+    localStorage.setItem("cartData", JSON.stringify(LocalArray));
     dispatch(addToCart(dish));
   };
   let allAppetizersDishes = appetizersDishes.appetizersDishes;
@@ -248,6 +254,8 @@ const FF = (FfDishes) => {
   const dispatch = useDispatch();
   // cart function
   const handleCart = (dish) => {
+    LocalArray.push(dish);
+    localStorage.setItem("cartData", JSON.stringify(LocalArray));
     dispatch(addToCart(dish));
   };
   let allFfDishes = FfDishes.FfDishes;
@@ -324,6 +332,8 @@ const BFD = (BfdDishes) => {
   const dispatch = useDispatch();
   // cart function
   const handleCart = (dish) => {
+    LocalArray.push(dish);
+    localStorage.setItem("cartData", JSON.stringify(LocalArray));
     dispatch(addToCart(dish));
   };
   let allBfdDishes = BfdDishes.BfdDishes;

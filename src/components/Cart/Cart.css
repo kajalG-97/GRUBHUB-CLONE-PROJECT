@@ -1,0 +1,15 @@
+.parentContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+.btn-class {
+  text-align: center;
+}
+.cart-btn {
+  margin-top: 15px;
+  background-color: orangered;
+  padding: 10px;
+}
