@@ -36,7 +36,9 @@ const settings = {
     speed: 500,
     slidesToShow: 7,
     slidesToScroll: 1,
+    
 };
+
 
 export const Promotions = () => {
     const [image, setImage] = useState([]);
@@ -48,7 +50,7 @@ export const Promotions = () => {
         axios.get(`https://grubhub-backend-clone.herokuapp.com/category`)
             .then((res) => setImage(res.data));
     }
-    console.log("img", image.image);
+    // console.log("img", image);
     return (
         <Wrapper>
             <div style={{ background: "white", padding: "20px 10px", width: "85%", margin: "auto" }}>

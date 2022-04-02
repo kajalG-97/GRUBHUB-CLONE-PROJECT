@@ -6,6 +6,18 @@ import National from "./National.json";
 import Delicious from "./Delicious.json";
 import { Link } from "react-router-dom";
 
+import styled from "styled-components";
+
+const IMG = styled.img`
+  cursor: pointer;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+`;
+
+
 // popular_data
 export const Section2 = () => {
   return (
@@ -19,14 +31,14 @@ export const Section2 = () => {
               style={{ textDecoration: "none", color: "black" }}
             >
               <div className="resto">
-                <img src={resto.img_url} alt="" />
+                <IMG src={resto.img_url} alt="" />
                 <h3 className="title">{resto.restaurant_name}</h3>
                 <div className="charges">
                   Delivery Charge: ${resto.delivery_charge}
                 </div>
                 <div>
                   <span className="flag">
-                    <img
+                    <IMG
                       src="https://res.cloudinary.com/grubhub-assets/image/upload/v1577660727/subscriptions/flag_oyyevx.svg"
                       alt=""
                     />
@@ -62,14 +74,14 @@ export const Section3 = () => {
               style={{ textDecoration: "none", color: "black" }}
             >
               <div className="resto">
-                <img src={resto.img_url} alt="" />
+                <IMG src={resto.img_url} alt="" />
                 <h3 className="title">{resto.restaurant_name}</h3>
                 <div className="charges">
                   Delivery Charge: ${resto.delivery_charge}
                 </div>
                 <div>
                   <span className="flag">
-                    <img
+                    <IMG
                       src="https://res.cloudinary.com/grubhub-assets/image/upload/v1577660727/subscriptions/flag_oyyevx.svg"
                       alt=""
                     />
@@ -106,14 +118,14 @@ export const Section4 = () => {
               style={{ textDecoration: "none", color: "black" }}
             >
               <div className="resto">
-                <img src={resto.img_url} alt="" />
+                <IMG src={resto.img_url} alt="" />
                 <h3 className="title">{resto.restaurant_name}</h3>
                 <div className="charges">
                   Delivery Charge: ${resto.delivery_charge}
                 </div>
                 <div>
                   <span className="flag">
-                    <img
+                    <IMG
                       src="https://res.cloudinary.com/grubhub-assets/image/upload/v1577660727/subscriptions/flag_oyyevx.svg
 "
                       alt=""
