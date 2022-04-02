@@ -12,7 +12,7 @@ export default function Navbar() {
       <ui style={{ display: "flex" }}>
         {/* logo */}
         <img
-          style={{ marginLeft: "35px", height: "70px" }}
+          style={{ marginLeft: "35px", height: "64px" }}
           src="https://seekvectorlogo.com/wp-content/uploads/2021/12/grubhub-vector-logo-2021.png"
           alt=""
         />
@@ -71,7 +71,7 @@ export default function Navbar() {
         />
       </ui>
 
-      <hr style={{ marginTop: "-10px" }} />
+      <hr style={{marginTop: "-17.5px",}} />
     </div>
   );
 }

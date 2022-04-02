@@ -4,7 +4,7 @@
   top: 0px;
   background-color: white;
   position: fixed;
-  height: 73px;
+  height: 64px;
   z-index: 1;
 }
 
@@ -93,11 +93,11 @@
   height: 100px;
 }
 
-.restro > h1 {
+.restro>h1 {
   margin-top: 5px;
 }
 
-.topbar > button {
+.topbar>button {
   color: #8e8e8f;
   border: none;
   background-color: white;
@@ -105,12 +105,12 @@
   cursor: pointer;
 }
 
-.topbar > button:hover {
+.topbar>button:hover {
   color: black;
   font-weight: bold;
 }
 
-.topbar > button:focus {
+.topbar>button:focus {
   text-decoration: underline;
   color: black;
   font-weight: bold;

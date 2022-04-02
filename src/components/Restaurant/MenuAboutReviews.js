@@ -16,6 +16,7 @@ const TopBar = () => {
     </div>
   );
 };
+
 const LocalArray = JSON.parse(localStorage.getItem("cartData")) || [];
 
 const Chicken = (chickenDishes) => {
