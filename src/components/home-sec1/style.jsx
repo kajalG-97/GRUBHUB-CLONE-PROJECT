@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const BImg = styled.div`
   background-image: url("https://res.cloudinary.com/grubhub-marketing/image/upload/f_auto,fl_lossy/v1621280438/HERMES/2021/DINER/SOC/SOC-202104005-GHGuaranteeMVP/GH%20New%20Hero%20Image%20Headers/GH_Headers_Desktop_copy.jpg");
   background-position: 50%;
-  height: 370px;
+  height: 330px;
   background-repeat: no-repeat;
   background-size: cover;
 /* text-align:center; */
@@ -15,6 +15,7 @@ color:white;
 padding-left:30%;
 padding-top: 4%;
  font-weight: 700;
+ margin-top:20px;
 
 `
 
@@ -48,7 +49,7 @@ color:white;
 text-align:center;
 display:flex;
 width:13%;
-margin-left:15%;
+margin-left:29%;
 justify-content:space-between;
 
 `
@@ -60,7 +61,7 @@ export const D = styled.div`
 background-color:white;
 color:black;
 width:100%;
-height:300px;
+height:150px;
 overflow:scroll;
 
 `

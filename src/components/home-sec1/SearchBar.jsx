@@ -102,7 +102,7 @@ export default function SearchAppBar() {
     return (
 
         <Box>
-            <Box sx={{ flexGrow: 1, alignItems: 'center', justifyContent: 'center', display: { xs: "none", md: "flex" } }}>
+            <Box sx={{ flexGrow: 1, alignItems: 'center', justifyContent: 'center', mt:3, display: { xs: "none", md: "flex" } }}>
 
                 <Box>
                     <Search>
@@ -172,21 +172,21 @@ export default function SearchAppBar() {
                         <StyledInputBase
                             placeholder="Search…"
                             inputProps={{ 'aria-label': 'search' }}
-                            onChange={(e) => optimizedFn(e.target.value)}
+                            onChange={(e) => optimize_function(e.target.value)}
                         />
                     </Search>
                     <Box>
 
-                        {suggestions.length > 0 && (
-                            <div className="autocomplete">
-                                {suggestions.map((el, i) => (
+                        {data.length > 0 && (
+                            <D className="autocomplete">
+                                {data.map((el, i) => (
                                     <div key={i} className="autocompleteItems">
                                         <Link to={`/restaurant/${el.restaurant_name}`}>
-                                            {el.restaurant_name}
+                                            <P>{el.restaurant_name}</P>
                                         </Link>
                                     </div>
                                 ))}
-                            </div>
+                            </D>
                         )}
                     </Box>
                 </Box>
@@ -207,11 +207,11 @@ export default function SearchAppBar() {
                         {suggestions.length > 0 && (
                             <div className="autocomplete">
                                 {suggestions.map((el, i) => (
-                                    <div key={i} className="autocompleteItems">
+                                    <D key={i} className="autocompleteItems">
                                         <Link to={`/restaurant/${el.restaurant_name}`}>
-                                            {el.restaurant_name}
+                                            <P>{el.restaurant_name}</P>
                                         </Link>
-                                    </div>
+                                    </D>
                                 ))}
                             </div>
                         )}

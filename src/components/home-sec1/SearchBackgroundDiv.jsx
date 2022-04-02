@@ -10,7 +10,7 @@ export const SearchBackgroundDiv = () => {
 
   return (
 
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 ,mt:7}}>
 
       <BImg className="SearchBackground">
         <H1>{htag}</H1>
