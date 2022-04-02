@@ -34,21 +34,7 @@ export default function Navbar() {
           alt=""
         />
 
-        {/* position img */}
-        {/* <img
-          style={{ marginLeft: "35px", height: "25px", marginTop: "25px" }}
-          src="https://w7.pngwing.com/pngs/258/544/png-transparent-location-logo-location-duke-university-logo-information-blue-earth-blue-plan-time.png"
-          alt=""
-        /> */}
-        {/* <Button
-          key={"Hi! Kajal"}
-
-          sx={{ my: 2, color: "black", display: "block" }}
-        >
-          location
-        </Button> */}
-
-        {/* location */}
+       
         <img src="https://img.icons8.com/windows/300/place-marker.png" style={{ marginLeft: "35px",marginTop:"13px", height: "40px" }}/>
         <p style={{ marginLeft: "8px", marginTop: "25px", color: "blue" }}>
           {val}
