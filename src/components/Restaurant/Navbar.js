@@ -31,13 +31,13 @@ export default function Navbar() {
     <div className="navbar">
       <ui style={{ display: "flex" }}>
         {/* logo */}
+        
         <img
-          onClick={() => navigate("/home")}
-          style={{ marginLeft: "35px", height: "70px" }}
           src="https://seekvectorlogo.com/wp-content/uploads/2021/12/grubhub-vector-logo-2021.png"
           alt=""
+          style={{ width: "130px", height: "60px", marginLeft: "25px"}}
+          onClick={() => navigate("/home")}
         />
-
         <img
           src="https://img.icons8.com/windows/300/place-marker.png"
           style={{ marginLeft: "35px", marginTop: "13px", height: "40px" }}
@@ -73,8 +73,6 @@ export default function Navbar() {
           sx={{ color: "black", marginRight: "2px", marginTop: "20px", marginLeft: "15px" }}
         />
       </ui>
-
-      <hr style={{ marginTop: "-17.5px", }} />
     </div>
   );
 }
