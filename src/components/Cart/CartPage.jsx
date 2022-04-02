@@ -3,8 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { ChakraProvider } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
-import { Box, Image, Badge } from "@chakra-ui/react";
-import { StarIcon } from "@chakra-ui/icons";
+import { Box, Image, Badge, Button } from "@chakra-ui/react";
+import { StarIcon, DeleteIcon } from "@chakra-ui/icons";
 import "./Cart.css";
 export const CartPage = () => {
   const navigate = useNavigate();
@@ -76,7 +76,6 @@ export const CartPage = () => {
                           {property.category}
                         </Box>
                       </Box>
-
                       <Box
                         mt="1"
                         fontWeight="semibold"
@@ -86,14 +85,12 @@ export const CartPage = () => {
                       >
                         {property.dish_name}
                       </Box>
-
                       <Box>
                         {property.price}
                         <Box as="span" color="gray.600" fontSize="sm">
                           $
                         </Box>
                       </Box>
-
                       <Box display="flex" mt="2" alignItems="center">
                         {Array(5)
                           .fill("")
@@ -110,6 +107,15 @@ export const CartPage = () => {
                         <Box as="span" ml="2" color="gray.600" fontSize="sm">
                           {Math.floor(Math.random() * 100) + 1} reviews
                         </Box>
+                      </Box>
+                      <Box style={{ marginTop: "10px" }}>
+                        <Button
+                          leftIcon={<DeleteIcon />}
+                          colorScheme="teal"
+                          variant="solid"
+                        >
+                          Delete
+                        </Button>
                       </Box>
                     </Box>
                   </Box>
