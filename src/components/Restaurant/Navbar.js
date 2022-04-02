@@ -33,7 +33,7 @@ export default function Navbar() {
         {/* logo */}
         <img
           onClick={() => navigate("/home")}
-          style={{ marginLeft: "35px", height: "70px" }}
+          style={{ marginLeft: "35px", height: "63px" }}
           src="https://seekvectorlogo.com/wp-content/uploads/2021/12/grubhub-vector-logo-2021.png"
           alt=""
         />
@@ -74,7 +74,7 @@ export default function Navbar() {
         />
       </ui>
 
-      <hr style={{ marginTop: "-17.5px", }} />
+      <hr style={{ marginTop: "-5px", }} />
     </div>
   );
 }
