@@ -7,6 +7,7 @@ import Delicious from "./Delicious.json";
 import { Link } from "react-router-dom";
 
 import styled from "styled-components";
+import BasicRating from "../home-sec1/rating";
 
 const IMG = styled.img`
   cursor: pointer;
@@ -52,6 +53,8 @@ export const Section2 = () => {
                   <span className="rating">
                     Rating : {resto.ratings}
                     <span className="star">★</span>
+                    {/* <BasicRating Rating={resto.ratings} /> */}
+                    {console.log('resto', resto.ratings)}
                   </span>
                 </div>
               </div>
@@ -191,7 +194,8 @@ export const Section5 = () => {
                   <div className="merg">
                     <span className="distance">{resto.average_time}Min</span>
                     <span className="rating">
-                      Rating : {resto.ratings}
+                      Rating:{resto.ratings}
+                      {/* <BasicRating  /> */}
                       <span className="star">★</span>
                     </span>
                   </div>

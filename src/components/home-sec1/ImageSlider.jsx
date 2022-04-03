@@ -27,7 +27,8 @@ const Wrapper = styled.header`
   margin: auto;
   /* margin-top: 20px; */
   /* padding: 20px 0; */
-  /* background: #fff; */
+  /* background: #000000; */
+  color:grey;
 `;
 
 const settings = {
@@ -36,7 +37,7 @@ const settings = {
     speed: 500,
     slidesToShow: 7,
     slidesToScroll: 1,
-    
+
 };
 
 
