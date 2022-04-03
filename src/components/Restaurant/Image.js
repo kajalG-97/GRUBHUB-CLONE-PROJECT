@@ -27,10 +27,8 @@ export default function Image({ url }) {
         src={singleData.image}
         alt=""
       />
-
       {/* leftBack arrow */}
       <div className="btn"> {arrow}</div>
-
       {/* bookmark Image */}
       <div className="btn2">
         <img
@@ -39,7 +37,6 @@ export default function Image({ url }) {
           alt=""
         />
       </div>
-
       {/* share img */}
       <div className="btn3">
         <img
@@ -48,7 +45,6 @@ export default function Image({ url }) {
           alt=""
         />
       </div>
-
       {/* logo of restaurant */}
       <div className="btn4">
         <img style={{ height: "100px", padding: "8px" }} src={url} alt="" />
