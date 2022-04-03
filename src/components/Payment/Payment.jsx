@@ -9,7 +9,7 @@ export const Payment = () => {
       <NavSignup />
       <div
         className="parent"
-        style={{ display: "flex", width: "100%", height: "800px" }}
+        style={{ display: "flex", width: "67%", height: "800px" }}
       >
         <LeftSide />
         <RightSide />

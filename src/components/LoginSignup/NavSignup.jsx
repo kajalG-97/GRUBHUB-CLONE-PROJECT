@@ -21,7 +21,7 @@ export const NavSignup = () => {
   return (
     <>
       <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static" sx={{ backgroundColor: "white" }}>
+        <AppBar position="fixed" sx={{ backgroundColor: "white" }}>
           <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
             <img
               src="https://seekvectorlogo.com/wp-content/uploads/2021/12/grubhub-vector-logo-2021.png"

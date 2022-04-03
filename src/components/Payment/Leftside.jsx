@@ -5,7 +5,7 @@ import { toast, ToastContainer } from "react-toastify"
  export const LeftSide=()=>{
     return(
         <>
-         <div style={{flex:"5", paddingLeft:"10px", paddingRight:"10px", height:"100%", border:"1px solid red"}}>
+         <div style={{flex:"5", paddingLeft:"10px", paddingRight:"10px", height:"100%", border:"1px solid red" ,width:"60%" ,paddingTop:"90px"}}>
         
                  <h1>Payment Information</h1>
                  <div style={{display:"flex",justifyContent:"space-between" ,marginBottom:"10px"}}>
@@ -18,13 +18,13 @@ import { toast, ToastContainer } from "react-toastify"
                      <input type="text" placeholder="Enter 16 digit card number" style={{width:"200px" ,height:"32px"}}/>
                      </div>
                      <div><label htmlFor="" style={{fontFamily:"sans-serif" ,fontSize:"16px",}}>Expire on</label><br />
-                     <input type="number" placeholder=" MM/YY " style={{width:"200px" ,height:"32px"}}/>
+                     <input type="text" placeholder=" MM/YY " style={{width:"200px" ,height:"32px"}}/>
                      </div>
                      <div><label htmlFor="" style={{fontFamily:"sans-serif" ,fontSize:"16px",}}>Securtiy Code</label><br />
-                     <input type="number" placeholder="security code    " style={{width:"200px" ,height:"32px"}}/>
+                     <input type="text" placeholder="security code    " style={{width:"200px" ,height:"32px"}}/>
                      </div>
                      <div><label htmlFor="" style={{fontFamily:"sans-serif" ,fontSize:"16px",}}>Postal code</label><br />
-                     <input type="text" placeholder="Enter 16 digit card number" style={{width:"200px" ,height:"32px"}}/>
+                     <input type="text" placeholder="postal code" style={{width:"200px" ,height:"32px"}}/>
                      </div>
 
                  </div>
