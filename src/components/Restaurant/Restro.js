@@ -19,12 +19,10 @@ export default function Restro() {
       <div className="restro">
         {/* restro name */}
         <h1>{name}</h1>
-
         <div
           style={{
             display: "flex",
             width: "100%",
-            // eslint-disable-next-line no-dupe-keys
             display: "inline-block",
             marginTop: "-20px",
           }}
@@ -50,7 +48,6 @@ export default function Restro() {
             src="https://www.svgrepo.com/show/24584/info-icon.svg"
             alt=""
           />
-
           {/* Start group order */}
           <p
             style={{
@@ -62,7 +59,6 @@ export default function Restro() {
           >
             Start group order
           </p>
-
           {/* group img */}
           <img
             style={{
