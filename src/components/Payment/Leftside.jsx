@@ -33,6 +33,7 @@ import { toast, ToastContainer } from "react-toastify";
                 <input type="checkbox" /> <label htmlFor="" style={{fontFamily:"sans-serif" ,fontSize:"15px",}}>Donate $0.02 to Grubhub Community Fund to support Ukraine. By checking this box you agree to the Donate the Change Terms of Use.</label><br />
                 <button  onClick={()=>{
                      toast.success("Your order is placed",{position:"top-center"})  
+                     localStorage.removeItem("cartData")
                      setTimeout(()=>{navigate("/home")},3000)
                      
                              }} style={{width:"100%",height:"6%" ,marginTop:"10px", backgroundColor:"#13aa37" ,color:"white" , border:"none" , borderRadeius:"10px"}}>Place your order </button>
@@ -42,6 +43,7 @@ import { toast, ToastContainer } from "react-toastify";
         </>
     )
 }
+
 
 
 // export const LeftSide = () => {
@@ -193,4 +195,3 @@ import { toast, ToastContainer } from "react-toastify";
 //     </>
 //   );
 // };
-

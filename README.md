@@ -7,7 +7,9 @@ you can click this link to see the project in your machine
 
 We used React, Redux, Material UI and Chakra for Front-end and Mongo-DB as a data-base and used Express for back-end and we deployed our backend using Heroku which provide a flexible way to connect front-end to back-end
 
+# Grubhub Blog link -->
 
+# https://medium.com/@kajalganorkar97/grubhub-mern-project-d18be46d3d1a
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
