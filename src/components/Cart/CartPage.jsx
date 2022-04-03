@@ -28,6 +28,17 @@ export const CartPage = () => {
       navigate("/login");
     }
   };
+  const handleDelete = (i) => {
+    let array = JSON.parse(localStorage.getItem("cartData"));
+    array.splice(i, 1);
+    localStorage.setItem("cartData", JSON.stringify(array));
+    const newArray = JSON.parse(localStorage.getItem("cartData"));
+    if (newArray.length == 0) {
+      localStorage.removeItem("cartData");
+      setShow(true);
+    }
+    setCartData(newArray);
+  };
   return (
     <div>
       <ResponsiveAppBar />
@@ -50,7 +61,7 @@ export const CartPage = () => {
         <ChakraProvider>
           <div>
             <div className="parentContainer">
-              {cartData.map((property) => {
+              {cartData.map((property, index) => {
                 return (
                   <Box
                     maxW="sm"
@@ -110,6 +121,7 @@ export const CartPage = () => {
                       </Box>
                       <Box style={{ marginTop: "10px" }}>
                         <Button
+                          onClick={() => handleDelete(index)}
                           leftIcon={<DeleteIcon />}
                           colorScheme="teal"
                           variant="solid"

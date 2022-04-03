@@ -17,7 +17,7 @@ const TopBar = () => {
   );
 };
 
-const LocalArray = JSON.parse(localStorage.getItem("cartData")) || [];
+let LocalArray;
 
 const Chicken = (chickenDishes) => {
   const dispatch = useDispatch();
@@ -817,7 +817,10 @@ export default function MenuAboutReviews() {
   useEffect(() => {
     axios
       .get(`https://grubhub-backend-clone.herokuapp.com/restaurant/${name}`)
-      .then((res) => setSingleData(...res.data));
+      .then((res) => setSingleData(...res.data))
+      .finally(() => {
+        LocalArray = JSON.parse(localStorage.getItem("cartData")) || [];
+      });
   }, []);
 
   const [chicken, setChicken] = useState([]);
