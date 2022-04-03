@@ -137,7 +137,7 @@ const Smoothies = (smoothiesDishes) => {
               <p
                 style={{ margin: "12px", marginTop: "-10px", color: "#6B6B83" }}
               >
-                {dish.description}
+                {dish.description}  Straight out of nature.
               </p>
             </div>
 
@@ -215,7 +215,7 @@ const Appetizers = (appetizersDishes) => {
               <p
                 style={{ margin: "12px", marginTop: "-10px", color: "#6B6B83" }}
               >
-                {dish.description}
+                {dish.description} An energy booster.
               </p>
             </div>
 
