@@ -5,7 +5,7 @@ import { toast, ToastContainer } from "react-toastify"
  export const LeftSide=()=>{
     return(
         <>
-         <div style={{flex:"5", paddingLeft:"10px", paddingRight:"10px", height:"100%", border:"1px solid red" ,width:"60%" ,paddingTop:"90px"}}>
+         <div style={{flex:"5", paddingLeft:"10px", paddingRight:"10px", height:"100%" ,width:"60%" ,paddingTop:"90px"}}>
         
                  <h1>Payment Information</h1>
                  <div style={{display:"flex",justifyContent:"space-between" ,marginBottom:"10px"}}>
