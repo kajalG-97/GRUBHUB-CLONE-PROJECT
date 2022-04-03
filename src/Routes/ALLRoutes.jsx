@@ -6,6 +6,7 @@ import { MainHomePage } from "../components/MainHome/MainHomePage";
 import { CartPage } from "../components/Cart/CartPage";
 import MainRestaurant from "../components/Restaurant/MainRestaurant";
 import { NotFound } from "../components/NotFound/NotFound";
+import { Payment } from "../components/Payment/Payment";
 export const AllRoutes = () => {
   return (
     <>
@@ -16,6 +17,7 @@ export const AllRoutes = () => {
         <Route exact path="/home" element={<MainHomePage />} />
         <Route exact path="/restaurant/:name" element={<MainRestaurant />} />
         <Route exact path="/cart" element={<CartPage />} />
+        <Route exact path="/payment" element={<Payment />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
