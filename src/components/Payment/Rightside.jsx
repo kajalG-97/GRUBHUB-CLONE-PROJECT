@@ -119,7 +119,7 @@ export const RightSide = () => {
                     style={{
                         width: "100px",
                         color: "white",
-                        marginLeft: "14%",
+                        marginLeft: "50%",
                         fontWeight: "bold",
                         fontSize: "24px",
                     }}
