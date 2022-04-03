@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import { useParams } from "react-router";
 
 export const RightSide = () => {
-    const [show, setShow] = useState(true);
+    
     const [cartData, setCartData] = useState([]);
     useEffect(() => {
         getData();
