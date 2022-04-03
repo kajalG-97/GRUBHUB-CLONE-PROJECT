@@ -46,13 +46,13 @@ export const RightSide = () => {
             <h3 style={{ marginLeft: "12px" }}>Your Order from</h3>
             <p style={{ color: "blue", marginLeft: "12px", cursor: "pointer" }}>7-Eleven</p>
 
-            <hr />
+            <hr style={{ color: "#c3c3c3" }} />
 
             <div style={{ lineHeight: "1px" }}>
                 <div style={{ display: "flex" }}>
 
                     <p style={{ marginLeft: "12px" }} >Items subtotal</p>
-                    <p style={{ marginLeft: "50%" }} >${subtotal}</p>
+                    <p style={{ marginLeft: "57%" }} >${subtotal}</p>
                 </div>
                 <div style={{ display: "flex" }}>
 
@@ -63,7 +63,7 @@ export const RightSide = () => {
                 <div style={{ display: "flex", fontWeight: "bold" }}>
 
                     <p style={{ marginLeft: "12px" }} >Total</p>
-                    <p style={{ marginLeft: "64%" }} >${total.toFixed(2)}</p>
+                    <p style={{ marginLeft: "65.5%" }} >${total.toFixed(2)}</p>
                 </div>
             </div>
 
