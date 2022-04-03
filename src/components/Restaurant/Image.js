@@ -3,9 +3,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 
 export default function Image({ url }) {
+
   let arrow = "<";
-  // let imgUrl =
-  //   "https://media-cdn.grubhub.com/image/upload/d_search:browse-images:default.jpg/w_1200,h_300,f_auto,q_auto,dpr_auto,g_auto,c_fill/kzesqadyjqyqgnhwdkzs";
 
   const [singleData, setSingleData] = useState([]);
 
