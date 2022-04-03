@@ -40,9 +40,11 @@ export default function Navbar() {
           style={{ marginLeft: "35px", marginTop: "13px", height: "40px" }}
           alt=""
         />
-        <p style={{ marginLeft: "8px", marginTop: "25px", color: "blue" }}>
-          {val}
-        </p>
+        <div>
+          <p style={{ marginLeft: "8px", marginTop: "25px", color: "blue", border: '1px solid red', width: "200px" }}>
+            {val}
+          </p>
+        </div>
         {/* searchbox */}
         <input
           style={{
@@ -59,14 +61,14 @@ export default function Navbar() {
         <Button
           key={"Hi! Kajal"}
 
-          sx={{ my: 2, marginLeft: "35%", color: "black", display: "block" }}
+          sx={{ my: 2, marginLeft: "25%", color: "black", display: "block", width: "100px", whiteSpace: "nowrap" }}
         >
           Hi! {authentication}
         </Button>
 
         <ShoppingBagIcon
           onClick={() => navigate("/cart")}
-          sx={{ color: "black", marginRight: "2px", marginTop: "20px", marginLeft: "15px" }}
+          sx={{ color: "black", marginRight: "2px", marginTop: "20px", marginLeft: "3%" }}
         />
       </ui>
       <hr style={{ marginTop: "-5px" }} />
