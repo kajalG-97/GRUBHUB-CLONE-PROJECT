@@ -49,7 +49,7 @@ export const CartPage = () => {
         <div style={{ textAlign: "center" }}>
           <div>
             <h1>Your Bag is Empty!</h1>
-            <Link to={"/home"}>Click here to add somthing to your bag</Link>
+            <Link to={"/login"}>Click here to add somthing to your bag</Link>
           </div>
           <img
             style={{ height: "500px" }}
