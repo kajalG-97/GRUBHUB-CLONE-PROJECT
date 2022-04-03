@@ -3,15 +3,13 @@ import "./restaurants.css";
 import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { useParams } from "react-router";
-import { useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
-
 import { useSelector } from "react-redux";
 import axios from "axios";
-
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 
 export default function Navbar() {
+
   const navigate = useNavigate();
 
   const authentication = useSelector((store) => store.login.login);
@@ -31,7 +29,6 @@ export default function Navbar() {
     <div className="navbar">
       <ui style={{ display: "flex" }}>
         {/* logo */}
-
         <img
           src="https://seekvectorlogo.com/wp-content/uploads/2021/12/grubhub-vector-logo-2021.png"
           alt=""
@@ -46,7 +43,6 @@ export default function Navbar() {
         <p style={{ marginLeft: "8px", marginTop: "25px", color: "blue" }}>
           {val}
         </p>
-
         {/* searchbox */}
         <input
           style={{
@@ -60,7 +56,6 @@ export default function Navbar() {
           type="text"
           placeholder="    Search Grubhub"
         />
-
         <Button
           key={"Hi! Kajal"}
 
@@ -74,9 +69,7 @@ export default function Navbar() {
           sx={{ color: "black", marginRight: "2px", marginTop: "20px", marginLeft: "15px" }}
         />
       </ui>
-
       <hr style={{ marginTop: "-5px" }} />
-
     </div>
   );
 }
