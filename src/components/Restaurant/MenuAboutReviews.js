@@ -481,7 +481,7 @@ const About = (aboutRest) => {
           <br />
           <hr />
 
-          <p style={{ color: "blue", marginLeft: "12px" }}>
+          <p style={{ cursor: "pointer", color: "blue", marginLeft: "12px" }}>
             See the full schedule
           </p>
         </div>
@@ -800,7 +800,7 @@ const Reviews = (aboutRest) => {
           Canned Soda +{" "}
         </div>
       </div>
-
+      <br />
       <hr />
     </div>
   );
