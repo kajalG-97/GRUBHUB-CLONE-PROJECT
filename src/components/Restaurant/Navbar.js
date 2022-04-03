@@ -41,7 +41,7 @@ export default function Navbar() {
           alt=""
         />
         <div>
-          <p style={{ marginLeft: "8px", marginTop: "25px", color: "blue", border: '1px solid red', width: "200px" }}>
+          <p style={{ marginLeft: "8px", marginTop: "25px", color: "blue", width: "200px" }}>
             {val}
           </p>
         </div>
