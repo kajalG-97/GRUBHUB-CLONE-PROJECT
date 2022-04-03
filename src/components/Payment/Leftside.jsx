@@ -1,6 +1,8 @@
+import { Navigate, useNavigate } from "react-router";
 import { toast, ToastContainer } from "react-toastify";
 
  export const LeftSide=()=>{
+     const navigate=useNavigate()
     return(
         <>
          <div style={{flex:"5", paddingLeft:"10px", paddingRight:"10px", height:"100%" ,width:"60%" ,paddingTop:"90px"}}>
@@ -30,8 +32,10 @@ import { toast, ToastContainer } from "react-toastify";
                 <h2 style={{marginBottom:"5px"}}>Donate the change</h2>
                 <input type="checkbox" /> <label htmlFor="" style={{fontFamily:"sans-serif" ,fontSize:"15px",}}>Donate $0.02 to Grubhub Community Fund to support Ukraine. By checking this box you agree to the Donate the Change Terms of Use.</label><br />
                 <button  onClick={()=>{
-                     toast.success("Your order is placed",{position:"top-center"})
-                }} style={{width:"100%",height:"6%" ,marginTop:"10px", backgroundColor:"#13aa37" ,color:"white" , border:"none" , borderRadeius:"10px"}}>Place your order </button>
+                     toast.success("Your order is placed",{position:"top-center"})  
+                     setTimeout(()=>{navigate("/home")},3000)
+                     
+                             }} style={{width:"100%",height:"6%" ,marginTop:"10px", backgroundColor:"#13aa37" ,color:"white" , border:"none" , borderRadeius:"10px"}}>Place your order </button>
                
          </div>
          <ToastContainer/>
