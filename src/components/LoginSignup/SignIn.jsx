@@ -68,8 +68,9 @@ export const SignIn = () => {
               "userlogin",
               JSON.stringify(res.data.user.firstName)
             );
-            navigate("/home");
+            
             notify();
+            setTimeout(()=>{navigate("/home");},3000)
           }
         })
         .catch((error) => {
@@ -96,6 +97,7 @@ export const SignIn = () => {
           },
           justifyContent: "center",
           marginTop: "20px",
+          paddingTop:"65px"
         }}
       >
         <Paper

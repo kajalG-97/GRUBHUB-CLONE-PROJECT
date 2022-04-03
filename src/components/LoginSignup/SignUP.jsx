@@ -9,9 +9,10 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Link } from "react-router-dom";
+import { Link  ,useNavigate} from "react-router-dom";
 import axios from "axios";
 export const SignUp = () => {
+  const navigate=useNavigate();
   const notify = () =>
     toast.success("Registered Successfully", {
       position: "top-center",
@@ -62,6 +63,7 @@ export const SignUp = () => {
         .then((res) => {
           if (res) {
             notify();
+            setTimeout(()=>{navigate("/Login")},3000)
           }
         })
         .catch((error) => {
@@ -83,6 +85,7 @@ export const SignUp = () => {
           },
           justifyContent: "center",
           marginTop: "20px",
+          paddingTop:"65px"
         }}
         component="form"
         noValidate
