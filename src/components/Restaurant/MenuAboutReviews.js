@@ -11,7 +11,6 @@ const TopBar = () => {
       <button>Menu</button>
       <button>About</button>
       <button>Reviews</button>
-
       <hr style={{ justifyContent: "center" }} />
     </div>
   );
@@ -449,12 +448,10 @@ const About = (aboutRest) => {
                 (571) 475-9319
               </span>{" "}
             </p>
-
             <br />
             <br />
             <br />
             <br />
-
             <p style={{ color: "#7E7283" }}>
               Call to place an order and get help.
             </p>
